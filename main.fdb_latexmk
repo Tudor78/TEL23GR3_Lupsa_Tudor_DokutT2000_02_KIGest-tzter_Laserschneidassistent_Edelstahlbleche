@@ -1,11 +1,12 @@
 # Fdb version 4
-["biber main"] 1753868637.46475 "main.bcf" "main.bbl" "main" 1754316278.51508 0
-  "main.bcf" 1754316278 108483 de15f8c15b702f636183158b20b92ebb "pdflatex"
+["biber main"] 0 "main.bcf" "main.bbl" "main" 1754326079.77263 -1
+  "includes/literatur-datenbank.bib" 1753947405 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "main.bcf" 1754326079 108483 de15f8c15b702f636183158b20b92ebb "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1754316276.11554 "c:/Users/tudor/Uni/TEL23GR3_Lupsa_Tudor_DokutT2000_02_KIGest-tzter_Laserschneidassistent_Edelstahlbleche/main.tex" "main.pdf" "main" 1754316278.51585 0
+["pdflatex"] 1754326077.0195 "c:/Users/tudor/Uni/TEL23GR3_Lupsa_Tudor_DokutT2000_02_KIGest-tzter_Laserschneidassistent_Edelstahlbleche/main.tex" "main.pdf" "main" 1754326079.77357 0
   "C:/Users/tudor/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1753947995 81107 70b8516c68c2e617189c5e44bfd16b96 ""
   "C:/Users/tudor/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx0900.pk" 1753948009 22504 11e87f4d37d3abf98f7e9d1c9e47e5b6 ""
   "C:/Users/tudor/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1095.pk" 1753948013 28976 9ac8970520adbd1e078124e61889a476 ""
@@ -189,25 +190,26 @@
   "_dhbw_authoryear.bbx" 1753947405 8121 f87e54d043d6b585fe5dd3ffac528549 ""
   "c:/Users/tudor/Uni/TEL23GR3_Lupsa_Tudor_DokutT2000_02_KIGest-tzter_Laserschneidassistent_Edelstahlbleche/main.tex" 1754315988 2144 cb6b029f30fdfb51bb2c387903da43bb ""
   "img/DHBW_Logo.jpg" 1753948710 15003 771ca5e626715c9118a3a169a25e5e3d ""
+  "img/DHBW_logo.jpg" 1753948710 15003 771ca5e626715c9118a3a169a25e5e3d ""
   "img/TruLogo_Print_RGB.jpg" 1753948708 11710 51f8d3a507830b954bcfd503c9444853 ""
   "includes/abkuerzungen.tex" 1753947405 2003 356e0ce6dd49c04c0e8e1259b023153b ""
   "includes/config.tex" 1753949356 3040 6d94d2d154759eb4089b3f3ebcc5c372 ""
-  "includes/einleitung.tex" 1754315620 3600 5452d895a053c3f0cd702518bd834b28 ""
+  "includes/einleitung.tex" 1754322931 3600 5452d895a053c3f0cd702518bd834b28 ""
   "includes/erklaerung_ki.tex" 1753947405 5425 86441931c36dacb28c837c49014fdc68 ""
-  "includes/grundlagen.tex" 1754315988 20 e400cb79f8f7b18bf401d959fa9836dc ""
+  "includes/grundlagen.tex" 1754326076 3095 f227cb2ff9a39f3780a6c2c7e03e4172 ""
   "includes/stand_der_technik.tex" 1754315988 27 f5ccf32790f27f8db1a172701b55fc87 ""
-  "main.aux" 1754316278 8909 a135b04647b75839fe5291fb444f3a94 "pdflatex"
+  "main.aux" 1754326079 11203 d790df7e9e2734b11469c74b2e46e56a "pdflatex"
   "main.bbl" 1753947892 486 76d65a242ec496c9b4361af646ff12cb "biber main"
-  "main.lof" 1754316278 30 dd9a1bdf2f8dbad8adb0552ea4fb4223 "pdflatex"
-  "main.lot" 1754316278 30 dd9a1bdf2f8dbad8adb0552ea4fb4223 "pdflatex"
-  "main.run.xml" 1754316278 2365 4a9c51e06dbd9008bb70a73b1290a8b1 "pdflatex"
+  "main.lof" 1754326079 142 0d96ce96eb3aaec83f2975ce86228557 "pdflatex"
+  "main.lot" 1754326079 30 dd9a1bdf2f8dbad8adb0552ea4fb4223 "pdflatex"
+  "main.run.xml" 1754326079 2365 4a9c51e06dbd9008bb70a73b1290a8b1 "pdflatex"
   "main.tex" 1754315988 2144 cb6b029f30fdfb51bb2c387903da43bb ""
-  "main.toc" 1754316278 1889 d7cc1acd35e957faccac8c27b04e4e65 "pdflatex"
+  "main.toc" 1754326079 2243 1de086df87c07717cd0a1f6ace71fa59 "pdflatex"
   "template/_dhbw_biblatex-config.tex" 1753947405 5863 6458ff6d1ddde7fe67c7cfcb4b877bb6 ""
   "template/_dhbw_deckblatt.tex" 1754316275 1385 98411b3ecc4ac459609ae3fb7868b9e9 ""
   "template/_dhbw_erklaerung.tex" 1753947405 946 13f182951ae36c7ba91049ce26ef857d ""
   "template/_dhbw_kopfzeilen.tex" 1753947405 3242 2adf395a861555cad5f7183940838bb6 ""
-  "template/_dhbw_praeambel.tex" 1753949402 5900 1eef8d748d8b0d72b14b7b47a6165de3 ""
+  "template/_dhbw_praeambel.tex" 1754325741 5900 1eef8d748d8b0d72b14b7b47a6165de3 ""
   (generated)
   "main.aux"
   "main.bcf"
