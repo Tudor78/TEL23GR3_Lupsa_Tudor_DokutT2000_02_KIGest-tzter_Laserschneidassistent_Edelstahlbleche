@@ -22,7 +22,7 @@
 
 \pagenumbering{Roman}
 
-%\input{includes/abstract.tex}
+% \input{includes/abstract.tex}
 
 
 %%% Inhalts-, Abbildungs-, Tabellenverzeichnisse %%%
@@ -44,6 +44,17 @@
 \addcontentsline{toc}{chapter}{\listtablename} % Tab.verz. ins Inh.verz. aufnehmen
 \end{spacing}
 
+% Deutscher Name (optional)
+\renewcommand{\lstlistlistingname}{Quellcodeverzeichnis}
+\renewcommand{\lstlistingname}{Quellcode}
+
+% Verzeichnis der Listings drucken
+\lstlistoflistings
+
+% (optional) ins Inhaltsverzeichnis aufnehmen
+\addcontentsline{toc}{chapter}{\lstlistlistingname}
+
+
 %%% Umstellung der Seiten-Nummerierung auf 1, 2, 3 ... %%%
 \cleardoublepage
 \pagenumbering{arabic}
@@ -55,7 +66,10 @@
 \input{includes/grundlagen.tex}
 \input{includes/stand_der_technik.tex}
 \input{includes/versuchsplanung_zur_identifikation_von_schnittabrissgrenzen}
-\blinddocument
+\input{includes/datengenerierung_experimentelplans.tex}
+\input{includes/messmethodik_datenerfassung_messzelle.tex}
+
+% \blinddocument
 %%% Ende des eigentlichen Inhalts %%%
 
 

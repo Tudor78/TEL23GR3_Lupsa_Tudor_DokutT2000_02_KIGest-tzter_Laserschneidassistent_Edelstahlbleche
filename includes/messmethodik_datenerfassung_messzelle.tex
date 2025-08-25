@@ -1,0 +1,136 @@
+\chapter{Messmethodik und Datenerfassung in der Messzelle}
+
+Die Messzelle dient der standardisierten, reproduzierbaren Erfassung aller Messdaten zu den im Rahmen der \emph{Experimentalpläne} geschnittenen Edelstahlbauteilen. Sie ist als sequenzieller Mess-Workflow ausgelegt, in dem ein mehrachsiger KUKA-Industrieroboter die Proben zwischen den Stationen handhabt und so einen kontinuierlichen Materialfluss sowie eine gleichbleibende Prozessführung sicherstellt. Die Bauteile werden an der Startposition gestapelt bereitgestellt, vom Roboter mittels Vakuumgreifer aufgenommen und der ersten Station zugeführt. Dort erfolgt die automatisierte Probenidentifikation über einen aufgebrachten QR-Code; die eindeutig ermittelte Proben-ID wird unmittelbar mit den Metadaten aus den \emph{Experimentalplänen} (z.\,B. Blechdicke, Werkstoffgüte, Soll-Parameter) verknüpft und dient in der Folge als Schlüssel für die Traceability sämtlicher Mess- und Auswertedaten.
+
+Im Anschluss werden an einer bildgebenden Station hochaufgelöste Aufnahmen der ersten Schnittkante erfasst. Hierzu kommt ein Handscanner zum Einsatz, dessen Aufnahmeparameter (Arbeitsabstand, Belichtung, Auflösung) konstant gehalten und protokolliert werden, um eine reproduzierbare Datenbasis zu gewährleisten. Diese Bilddaten bilden die Grundlage für die bildgestützte Qualitätsschätzung des KI-Systems. Ergänzend dazu wird die gleiche Schnittkante mit einem Keyence-System dreidimensional vermessen, sodass eine 3D-Punktwolke des Kantenverlaufs entsteht. Aus dieser Punktwolke werden definierte Profilverläufe abgeleitet und geometrische Kenngrößen berechnet, die der Quantifizierung von Gratbildung und rauheitsnahen Merkmalen dienen. Die so gewonnenen Ist-Kenngrößen fungieren als Referenz für den späteren Abgleich mit der Bildqualitätsschätzung.
+
+Zur vollständigen Dokumentation werden die Schnittkanten zudem mit einer Industriekamera und einem stationären Smartphone-Setup unter definierten Beleuchtungsbedingungen aufgenommen. Die Kombination aus unterschiedlichen Kameras und Beleuchtungen erhöht die Robustheit der visuellen Beurteilbarkeit und unterstützt die spätere manuelle Plausibilisierung von Auffälligkeiten. Sämtliche Rohdaten (Scannerbilder, Industriekamera-/Smartphone-Aufnahmen, 3D-Punktwolken) sowie die daraus abgeleiteten Kenngrößen werden unmittelbar der Proben-ID zugeordnet, qualitätsgeprüft und in die zentrale Datenbank überführt.
+
+Nach der Datenerfassung werden aus der 3D-Messung die tatsächlichen Kenngrößen der Schnittkante berechnet und den Ergebnissen der bildbasierten Qualitätsschätzung gegenübergestellt. Dieser Abgleich ermöglicht die Beurteilung der Übereinstimmung zwischen qualitativer, bildgestützter Bewertung und quantitativer Geometriemessung. Die beschriebenen Messschritte werden für alle vier Schnittkanten jedes Bauteils identisch wiederholt, um kantenbezogene Effekte (z.\,B. Richtungsabhängigkeiten des Schneidprozesses) erfassen zu können. Abschließend legt der Roboter die vollständig vermessenen Proben an der Endstation geordnet ab. Damit entsteht für jede Probe ein konsistenter, rückverfolgbarer Datensatz aus Identifikation, Rohdaten, abgeleiteten Kenngrößen und Qualitätsurteilen, der als kuratierte Grundlage für Training und Validierung des KI-Modells dient.
+
+\section{Anpassung des Handscanner-Setups}
+
+Für die bildgestützte Qualitätsschätzung werden die mit dem Handscanner aufgenommenen Schnittkantenbilder als zentrale Eingangsgröße verwendet. Die bisher im Einsatz befindlichen Aufnahmeparameter waren für Baustahl optimiert. Baustahl weist im Vergleich zu Edelstahl eine geringere Oberflächenreflexion und eine tendenziell matte Erscheinung auf. Werden diese Einstellungen unverändert auf Edelstahl angewandt, führt die höhere Reflexion zu Bildartefakten (Glanzlichter, lokale Überstrahlungen) und zu einer unzureichenden Abbildung der relevanten Mikrostruktur. In der Folge würden Grate (\emph{Burr}) unterrepräsentiert und die Rauheit (\emph{Roughness}) potenziell verfälscht erscheinen. Da die Klassifikation der Bildqualität und die darauf basierende Schätzung von \emph{Burr} und \emph{Roughness} unmittelbar in die Parametrierung des Laserschneidprozesses zurückwirken, ist eine werkstoffabhängige Anpassung des Handscanner-Setups zwingend erforderlich.
+
+Das Aufnahmeprotokoll sieht pro Schnittkante drei Bilder vor: (i) ein bewusst dunkler belichtetes Bild, das primär der Beurteilung der Schnittflächenrauheit dient, sowie (ii) zwei überbelichtete Bilder, die gemeinsam mit dem ersten zu einem HDR-Komposit zusammengeführt werden, um die Kontur und Ausprägung des Grats sicher zu erfassen. Die Kalibrierung der Belichtung erfolgt schrittweise und operativ geführt. Zunächst wird die Belichtungszeit für das Rauheitsbild so eingestellt, dass die Textur der Schnittfläche ohne Sättigung und mit klarer Detailzeichnung sichtbar ist; die Entscheidung erfolgt in dieser Phase bewusst subjektiv, jedoch anhand vorab definierter visueller Kriterien (ausreichender Tonwertumfang, erkennbarer Strukturkontrast, Ausbleiben großflächiger Clipping-Bereiche). Im Anschluss werden die Belichtungsparameter der beiden HDR-Bilder iterativ variiert, bis der Grat entlang der Schnittkante über den gesamten Bildbereich eindeutig detektierbar ist, ohne dass umliegende Bereiche vollständig ausbrennen. Da die HDR-Komposition durch die Eingangsbilder beeinflusst wird, erfolgt die Abstimmung der HDR-Belichtungen stets nach der Festlegung des Rauheitsbildes.
+
+Zur Sicherstellung der Kompatibilität mit dem bestehenden KI-Modell wird die Anpassung an Referenzaufnahmen aus der bereits validierten Baustahlkonfiguration ausgerichtet. Praktisch bedeutet dies, dass eine Baustahlschnittkante mit den etablierten Baustahleinstellungen aufgenommen wird und die Edelstahlaufnahmen so justiert werden, dass die resultierenden Bildcharakteristika (insbesondere Histogrammverteilung und lokaler Kontrast an der Kantenregion) in qualitativer Hinsicht vergleichbar sind. Auf diese Weise wird gewährleistet, dass die Edelstahlbilder in das bestehende Modell eingebunden und mit den vorhandenen Trainings- und Bewertungsroutinen verarbeitet werden können, ohne systematische Verzerrungen einzuführen.
+
+Neben der Belichtung werden alle aufnahmerelevanten Parameter (Arbeitsabstand, Blickwinkel, Fokuslage, Auflösung) konstant gehalten und protokolliert, um die Vergleichbarkeit zwischen Proben und Messserien sicherzustellen. Fehlanpassungen des Setups würden ansonsten zu Fehlklassifikationen führen (z.\,B. „gut“ statt „unzureichend“) und in der Folge \emph{Burr}- und \emph{Roughness}-Schätzungen verfälschen; dies hätte unmittelbare Konsequenzen für die Optimierung der Schneidparameter. Durch die werkstoffabhängige Justage und die konsequente Dokumentation der Aufnahmeparameter wird die notwendige Reproduzierbarkeit erreicht und die Grundlage für eine belastbare, KI-gestützte Qualitätsschätzung der Edelstahlschnittkanten geschaffen.
+
+Zur konsistenten Anwendung der angepassten Handscanner-Parameter wird das Messzellen-Skript so erweitert, dass das passende Setup automatisiert auf Basis der Bauteilbezeichnung gewählt wird. Die Benennung folgt dem Schema
+\texttt{Maschinenname-\allowbreak Experimentalplanname-\allowbreak Materia
+lnummer-\allowbreak Bauteildicke-\allowbreak Bauteilnummer},
+z.\,B.\ \texttt{A02280E0005-\allowbreak AiMuWrCjd0-\allowbreak 3-\allowbreak 050-\allowbreak 0176}.
+
+Das Skript parst die Zeichenkette, prüft die Zahl nach dem zweiten Bindestrich und lädt abhängig davon die vordefinierten Handscanner-Einstellungen für den jeweiligen Werkstoff. Auf diese Weise wird sichergestellt, dass die für Edelstahl kalibrierten Belichtungen und Aufnahmeparameter reproduzierbar zur Anwendung kommen und die so erzeugten Bilder ohne systematische Verzerrungen in die Qualitätsmodellierung eingehen. Dies ist im folgendem C-Sharp Quellcode ~\ref{lst:messzellen-routing} dargestellt und im Messzellenskript inplementiert.
+
+\begin{lstlisting}[language={[Sharp]C}, caption={Werkstoffabhängiges Routing der Handscanner-Setups}, label={lst:messzellen-routing}]
+public static string NameParserMaterial(string input)
+{
+    if (string.IsNullOrWhiteSpace(input))
+        return "ST";                                // Fallback-Wert
+
+    // Position des ersten und zweiten Bindestrichs ermitteln
+    int firstDash = input.IndexOf('-');
+    int secondDash = firstDash >= 0
+                   ? input.IndexOf('-', firstDash + 1)
+                   : -1;
+
+    // Prüfen, ob ein zweiter Bindestrich und ein Zeichen dahinter existieren
+    if (secondDash < 0 || secondDash + 1 >= input.Length)
+        return "ST";                                // Fallback-Wert
+
+    char digit = input[secondDash + 1];             // Ziffer einlesen
+
+    // Zuordnung: 1 → "ST", 2 → "ST", 3 → "SS" (bei Bedarf anpassen)
+    return digit switch
+    {
+        '1' => "ST",
+        '2' => "ST",
+        '3' => "SS",
+        _ => "ST"                                   // Default
+    };
+}
+\end{lstlisting}
+
+\section{Optimierung der Vektorberechnung aus 3D-Punktwolken}
+
+Die mit dem Keyence-System aufgenommene 3D-Punktwolke der Schnittkante bildet die Grundlage für die geometrische Qualitätsauswertung. In der bestehenden Auswertepipeline wird die Punktwolke zunächst segmentiert und in ein lokales Kantenkoordinatensystem überführt. Anschließend erfolgt eine Projektion aus der dreidimensionalen Repräsentation in einen zweidimensionalen Profilverlauf, sodass ein 2D-Vektor entsteht, der den Verlauf des Schneidgrats entlang der Schnittkante beschreibt. Diese Vorgehensweise wurde ursprünglich für Baustahl entwickelt und auf dessen charakteristisch eher wellige, kontinuierliche Gratmorphologie abgestimmt.
+
+Bei Edelstahl zeigt sich jedoch eine abweichende, ausgeprägt zackige Gratstruktur mit höheren lokalen Gradienten und diskontinuierlichen Profilabschnitten. Die bislang implementierte Outlier-Korrektur—konzipiert zur Eliminierung sporadischer Messfehler bei Baustahl—stuft diese hochfrequenten, jedoch materialtypischen Strukturen fälschlich als Ausreißer ein und glättet sie übermäßig. Dadurch werden relevante Merkmale des Edelstahlgrats unterdrückt und der resultierende Vektorverlauf in Richtung eines künstlich „glatten“ Profils verzerrt.
+
+Erschwerend kommt hinzu, dass im Messprozess partiell überbeschattete Bereiche auftreten können, die vom Sensor nicht erfasst werden. In der bisherigen Pipeline werden solche Lücken durch Interpolation geschlossen, deren Parameter auf die kontinuierlichen Profile von Baustahl zugeschnitten sind. Für den zackigen Edelstahlgrat führt dies zu einer zu starken Annäherung an glatte Zwischenverläufe und damit zu einem Verlust an formcharakteristischer Information.
+
+Zur materialspezifischen Anpassung werden daher zwei Kernmodule der Pipeline überarbeitet: (i) die Ausreißererkennung mit nachgelagerter Korrektur und (ii) die Interpolation fehlender Stützstellen. In der Ausreißererkennung werden die Schwellwerte und die zugrunde liegenden Sensitivitätsmaße an die höhere lokale Krümmung und den gesteigerten Kantenkontrast des Edelstahlgrats angepasst. Ziel ist eine Differenzierung zwischen echten Messfehlern (z.\,B. einzelne, isolierte Ausreißerpunkte) und materialtypischen Hochfrequenzanteilen. Entsprechend werden Glättungsschritte zurückgenommen bzw. mit kanten- bzw. struktur­erhaltenden Verfahren ausgeführt, sodass signifikante Gratflanken erhalten bleiben. 
+
+Für die Interpolation wird ein konservativer Ansatz gewählt, der Lückenschlüsse bevorzugt entlang lokal konsistenter Nachbarschaften vornimmt und globale, stark glättende Approximationen vermeidet. Bereiche mit geringer Messsicherheit werden explizit maskiert und in der Auswertung als solche gekennzeichnet, um eine Fehlinterpretation interpolierter Segmente als Messwahrheit zu verhindern. Damit wird erreicht, dass der rekonstruierte 2D-Vektor fehlende Messpunkte plausibel ergänzt, ohne die charakteristische Zackigkeit des Edelstahlgrats zu nivellieren.
+
+\subsection{Outlier Detection/Correction}
+
+Die Ausreißerbehandlung erfolgt zweistufig: Zunächst werden potenzielle Ausreißerpunkte durch den Vergleich des gemessenen Profils mit einem lokal geglätteten Referenzsignal identifiziert; anschließend werden die dadurch entstehenden Lücken kontrolliert rekonstruiert. In \texttt{outlier\_correction\_burr} wird das Höhenprofil \texttt{z\_vec} mittels gleitendem Mittelwert (\texttt{np.convolve} mit Fensterlänge \texttt{window}) geglättet. Die absolute Abweichung \(\Delta=\lvert z-\overline{z}_{\text{MA}}\rvert\) wird punktweise gegen den Schwellwert \texttt{threshold} geprüft. Punkte oberhalb des Schwellwertes bilden die Ausreißermaske; ist der Anteil markierter Punkte größer als \texttt{max\_nan\_values\_perc}, wird der Vorgang verworfen (\texttt{None}). Andernfalls werden die Ausreißer zu \texttt{NaN} gesetzt und mit \texttt{smooth\_nan\_values} rekonstruiert (begrenzte Interpolation kleiner Lücken, optional Savitzky–Golay-Glättung), um numerisches Rauschen zu reduzieren, ohne relevante Strukturen zu nivellieren.
+
+Die Funktion \texttt{outlier\_correction\_profile\_lines} setzt denselben Ansatz für einzelne Profilzeilen um, verwendet jedoch standardmäßig einen robusten gleitenden Median (\texttt{median=True}) als Referenzsignal (alternativ Mittelwert). Aus der Abweichung zum Referenzsignal wird eine Ausreißermaske gebildet und über \texttt{max\_outlier\_values\_perc} validiert. Markierte Punkte werden zu \texttt{NaN} gesetzt und anschließend nur dann interpoliert, wenn die Lückenlänge die Vorgabe \texttt{max\_gap} nicht überschreitet (\texttt{interpolate\_limited\_nans}). Für Edelstahlprofile mit ausgeprägt zackiger Gratmorphologie sind robuste Referenzen (Median), moderat erhöhte Schwellwerte und kleinere Fenstergrößen empfehlenswert, damit genuine Hochfrequenzanteile nicht fälschlich als Ausreißer behandelt werden.
+
+\begin{lstlisting}[language=Python, caption={Outlier Detection/Correction in der Profilvorverarbeitung}, label={lst:outlier-correction}]
+def outlier_correction_burr(x_vec, z_vec, threshold=0.04, window=20, max_nan_values_perc=0.4):
+    """
+    Entfernt Ausreißer anhand eines Moving-Average-Vergleichs.
+    """
+    z_vec = np.copy(z_vec)
+    z_smoothed = np.convolve(z_vec, np.ones(window) / window, mode='same')
+    difference = np.abs(z_vec - z_smoothed)
+
+    outlier_mask = difference > threshold
+    num_outliers = np.sum(outlier_mask)
+
+    if num_outliers / len(z_vec) > max_nan_values_perc:
+        return None, None
+
+    z_vec[outlier_mask] = np.nan
+    z_vec_clean = smooth_nan_values(x_vec, z_vec)
+
+    return x_vec, z_vec_clean
+
+
+def outlier_correction_profile_lines(line, outlier_threshold=0.04, window_size=30,
+                                     median=True, max_outlier_values_perc=0.35, max_gap=5):
+    """
+    Entfernt Ausreißer in Höhenprofilen basierend auf Median- oder Mittelwert-Vergleich.
+    """
+    Z_series = pd.Series(line)
+    tmp_line = line.copy()
+
+    if median:
+        moving_avg = Z_series.rolling(window_size, min_periods=5, center=True).median()
+    else:
+        moving_avg = Z_series.rolling(window_size, min_periods=5, center=True).mean()
+
+    difference = np.abs(line - moving_avg)
+    id_outlier = difference > outlier_threshold
+    count_outlier = np.sum(id_outlier)
+
+    if count_outlier / len(line) > max_outlier_values_perc:
+        return None, None
+
+    tmp_line[id_outlier] = np.nan
+    tmp_line = interpolate_limited_nans(tmp_line, max_gap=max_gap)
+
+    return tmp_line, moving_avg
+\end{lstlisting}
+
+In der Edelstahl-Pipeline wurden die Schwellwerte der Burr-Outlier-Korrektur angehoben und das Fenster leicht verkürzt, um zackige, materialspezifische Hochfrequenzanteile nicht fälschlich als Ausreißer zu markieren. Zum Vergleich sind nachfolgend die verwendeten Parameter für Edelstahl sowie die bisherige Baustahl-Konfiguration aufgeführt (siehe auch Quellcode~\ref{lst:params-outlier-stainless} und Quellcode~\ref{lst:params-outlier-mild}).
+
+\begin{lstlisting}[caption={Pipeline-Parameter Outlier Correction (Edelstahl)}, label={lst:params-outlier-stainless}]
+# Parameter burr outlier correction (Edelstahl)
+burr_outlier_threshold : 0.06  # Threshold for Moving Average Difference Filter [mm]
+burr_outlier_window    : 9     # Window for Moving Average Difference Filter [samples]
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Pipeline-Parameter Outlier Correction (Baustahl)}, label={lst:params-outlier-mild}]
+# Parameter burr outlier correction (Baustahl)
+burr_outlier_threshold : 0.03  # Threshold for Moving Average Difference Filter [mm]
+burr_outlier_window    : 10    # Window for Moving Average Difference Filter [samples]
+\end{lstlisting}
+
+\subsection {Interpolation}
