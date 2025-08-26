@@ -16,3 +16,4 @@
 \contentsline {subsection}{\numberline {6.2.1}Outlier Detection/Correction}{12}{subsection.43}%
 \contentsline {subsection}{\numberline {6.2.2}Interpolation}{14}{subsection.97}%
 \contentsline {chapter}{Literaturverzeichnis}{15}{section*.98}%
+\contentsline {chapter}{\nonumberline Anhang}{15}{chapter*.99}%

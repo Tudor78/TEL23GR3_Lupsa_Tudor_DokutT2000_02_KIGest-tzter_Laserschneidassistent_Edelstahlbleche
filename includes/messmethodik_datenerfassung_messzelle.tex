@@ -58,7 +58,9 @@ public static string NameParserMaterial(string input)
 
 Die mit dem Keyence-System aufgenommene 3D-Punktwolke der Schnittkante bildet die Grundlage für die geometrische Qualitätsauswertung. In der bestehenden Auswertepipeline wird die Punktwolke zunächst segmentiert und in ein lokales Kantenkoordinatensystem überführt. Anschließend erfolgt eine Projektion aus der dreidimensionalen Repräsentation in einen zweidimensionalen Profilverlauf, sodass ein 2D-Vektor entsteht, der den Verlauf des Schneidgrats entlang der Schnittkante beschreibt. Diese Vorgehensweise wurde ursprünglich für Baustahl entwickelt und auf dessen charakteristisch eher wellige, kontinuierliche Gratmorphologie abgestimmt.
 
-Bei Edelstahl zeigt sich jedoch eine abweichende, ausgeprägt zackige Gratstruktur mit höheren lokalen Gradienten und diskontinuierlichen Profilabschnitten. Die bislang implementierte Outlier-Korrektur—konzipiert zur Eliminierung sporadischer Messfehler bei Baustahl—stuft diese hochfrequenten, jedoch materialtypischen Strukturen fälschlich als Ausreißer ein und glättet sie übermäßig. Dadurch werden relevante Merkmale des Edelstahlgrats unterdrückt und der resultierende Vektorverlauf in Richtung eines künstlich „glatten“ Profils verzerrt.
+Die nachfolgend beschriebenen Anpassungen betreffen ausschließlich den \textbf{Grat-/Burr}-Kanal (Ausreißererkennung und Interpolation). Für die \textbf{Rauheitsanalyse (Roughness)} werden die in der Baustahl-Pipeline etablierten Einstellungen \emph{unverändert} übernommen. Interne Funktionsprüfungen unter identischen Aufnahme- und Auswertebedingungen zeigen eine stabile und konsistente Rauheitsbewertung, sodass in diesem Kapitel bewusst auf Abbildungen als Nachweis verzichtet wird.
+
+Bei Edelstahl zeigt sich eine abweichende, ausgeprägt zackige Gratstruktur mit höheren lokalen Gradienten und diskontinuierlichen Profilabschnitten. Die bislang implementierte Outlier-Korrektur—konzipiert zur Eliminierung sporadischer Messfehler bei Baustahl—stuft diese hochfrequenten, jedoch materialtypischen Strukturen fälschlich als Ausreißer ein und glättet sie übermäßig. Dadurch werden relevante Merkmale des Edelstahlgrats unterdrückt und der resultierende Vektorverlauf in Richtung eines künstlich „glatten“ Profils verzerrt.
 
 Erschwerend kommt hinzu, dass im Messprozess partiell überbeschattete Bereiche auftreten können, die vom Sensor nicht erfasst werden. In der bisherigen Pipeline werden solche Lücken durch Interpolation geschlossen, deren Parameter auf die kontinuierlichen Profile von Baustahl zugeschnitten sind. Für den zackigen Edelstahlgrat führt dies zu einer zu starken Annäherung an glatte Zwischenverläufe und damit zu einem Verlust an formcharakteristischer Information.
 
@@ -68,11 +70,11 @@ Für die Interpolation wird ein konservativer Ansatz gewählt, der Lückenschlü
 
 \subsection{Outlier Detection/Correction}
 
-Die Ausreißerbehandlung erfolgt zweistufig: Zunächst werden potenzielle Ausreißerpunkte durch den Vergleich des gemessenen Profils mit einem lokal geglätteten Referenzsignal identifiziert; anschließend werden die dadurch entstehenden Lücken kontrolliert rekonstruiert. In \texttt{outlier\_correction\_burr} wird das Höhenprofil \texttt{z\_vec} mittels gleitendem Mittelwert (\texttt{np.convolve} mit Fensterlänge \texttt{window}) geglättet. Die absolute Abweichung \(\Delta=\lvert z-\overline{z}_{\text{MA}}\rvert\) wird punktweise gegen den Schwellwert \texttt{threshold} geprüft. Punkte oberhalb des Schwellwertes bilden die Ausreißermaske; ist der Anteil markierter Punkte größer als \texttt{max\_nan\_values\_perc}, wird der Vorgang verworfen (\texttt{None}). Andernfalls werden die Ausreißer zu \texttt{NaN} gesetzt und mit \texttt{smooth\_nan\_values} rekonstruiert (begrenzte Interpolation kleiner Lücken, optional Savitzky–Golay-Glättung), um numerisches Rauschen zu reduzieren, ohne relevante Strukturen zu nivellieren.
+Die Ausreißerbehandlung im \textbf{Burr}-Kanal erfolgt zweistufig: Zunächst werden potenzielle Ausreißerpunkte durch den Vergleich des gemessenen Profils mit einem lokal geglätteten Referenzsignal identifiziert; anschließend werden die dadurch entstehenden Lücken kontrolliert rekonstruiert. In \texttt{outlier\_correction\_burr} wird das Höhenprofil \texttt{z\_vec} mittels gleitendem Mittelwert (\texttt{np.convolve} mit Fensterlänge \texttt{window}) geglättet. Die absolute Abweichung \(\Delta=\lvert z-\overline{z}_{\text{MA}}\rvert\) wird punktweise gegen den Schwellwert \texttt{threshold} geprüft. Punkte oberhalb des Schwellwertes bilden die Ausreißermaske; ist der Anteil markierter Punkte größer als \texttt{max\_nan\_values\_perc}, wird der Vorgang verworfen (\texttt{None}). Andernfalls werden die Ausreißer zu \texttt{NaN} gesetzt und mit \texttt{smooth\_nan\_values} rekonstruiert, um numerisches Rauschen zu reduzieren, ohne relevante Strukturen zu nivellieren.
 
-Die Funktion \texttt{outlier\_correction\_profile\_lines} setzt denselben Ansatz für einzelne Profilzeilen um, verwendet jedoch standardmäßig einen robusten gleitenden Median (\texttt{median=True}) als Referenzsignal (alternativ Mittelwert). Aus der Abweichung zum Referenzsignal wird eine Ausreißermaske gebildet und über \texttt{max\_outlier\_values\_perc} validiert. Markierte Punkte werden zu \texttt{NaN} gesetzt und anschließend nur dann interpoliert, wenn die Lückenlänge die Vorgabe \texttt{max\_gap} nicht überschreitet (\texttt{interpolate\_limited\_nans}). Für Edelstahlprofile mit ausgeprägt zackiger Gratmorphologie sind robuste Referenzen (Median), moderat erhöhte Schwellwerte und kleinere Fenstergrößen empfehlenswert, damit genuine Hochfrequenzanteile nicht fälschlich als Ausreißer behandelt werden.
+Die Funktion \texttt{outlier\_correction\_profile\_lines} setzt denselben Ansatz für einzelne Profilzeilen um, verwendet jedoch standardmäßig einen robusten gleitenden Median (\texttt{median=True}) als Referenzsignal (alternativ Mittelwert). Aus der Abweichung zum Referenzsignal wird eine Ausreißermaske gebildet und über \texttt{max\_outlier\_values\_perc} validiert. Markierte Punkte werden zu \texttt{NaN} gesetzt und anschließend nur dann interpoliert, wenn die Lückenlänge die Vorgabe \texttt{max\_gap} nicht überschreitet (\texttt{interpolate\_limited\_nans}). \emph{Hinweis:} Die \textbf{Rauheitsanalyse} nutzt unverändert die etablierten Baustahl-Einstellungen; hierfür erfolgt keine Umparametrisierung.
 
-\begin{lstlisting}[language=Python, caption={Outlier Detection/Correction in der Profilvorverarbeitung}, label={lst:outlier-correction}]
+\begin{lstlisting}[language=Python, caption={Outlier Detection/Correction in der Profilvorverarbeitung (Burr-Kanal)}, label={lst:outlier-correction}]
 def outlier_correction_burr(x_vec, z_vec, threshold=0.04, window=20, max_nan_values_perc=0.4):
     """
     Entfernt Ausreißer anhand eines Moving-Average-Vergleichs.
@@ -119,18 +121,24 @@ def outlier_correction_profile_lines(line, outlier_threshold=0.04, window_size=3
     return tmp_line, moving_avg
 \end{lstlisting}
 
-In der Edelstahl-Pipeline wurden die Schwellwerte der Burr-Outlier-Korrektur angehoben und das Fenster leicht verkürzt, um zackige, materialspezifische Hochfrequenzanteile nicht fälschlich als Ausreißer zu markieren. Zum Vergleich sind nachfolgend die verwendeten Parameter für Edelstahl sowie die bisherige Baustahl-Konfiguration aufgeführt (siehe auch Quellcode~\ref{lst:params-outlier-stainless} und Quellcode~\ref{lst:params-outlier-mild}).
+In der Edelstahl-Pipeline wurden die Schwellwerte der Burr-Outlier-Korrektur angehoben und das Fenster leicht verkürzt, um zackige, materialspezifische Hochfrequenzanteile nicht fälschlich als Ausreißer zu markieren. Zum Vergleich sind nachfolgend die verwendeten Parameter für Edelstahl sowie die bisherige Baustahl-Konfiguration aufgeführt (siehe auch Quellcode~\ref{lst:params-outlier-stainless} und Quellcode~\ref{lst:params-outlier-mild}). Für die \textbf{Rauheitsanalyse} wurden \emph{keine} Parameteränderungen vorgenommen.
 
-\begin{lstlisting}[caption={Pipeline-Parameter Outlier Correction (Edelstahl)}, label={lst:params-outlier-stainless}]
+\begin{lstlisting}[caption={Pipeline-Parameter Outlier Correction (Edelstahl, Burr-Kanal)}, label={lst:params-outlier-stainless}]
 # Parameter burr outlier correction (Edelstahl)
 burr_outlier_threshold : 0.06  # Threshold for Moving Average Difference Filter [mm]
 burr_outlier_window    : 9     # Window for Moving Average Difference Filter [samples]
 \end{lstlisting}
 
-\begin{lstlisting}[caption={Pipeline-Parameter Outlier Correction (Baustahl)}, label={lst:params-outlier-mild}]
+\begin{lstlisting}[caption={Pipeline-Parameter Outlier Correction (Baustahl, Burr-Kanal)}, label={lst:params-outlier-mild}]
 # Parameter burr outlier correction (Baustahl)
 burr_outlier_threshold : 0.03  # Threshold for Moving Average Difference Filter [mm]
 burr_outlier_window    : 10    # Window for Moving Average Difference Filter [samples]
 \end{lstlisting}
 
-\subsection {Interpolation}
+\subsection{Interpolation}
+
+Die Interpolation dient der Rekonstruktion fehlender Messwerte (\texttt{NaN}), die durch Ausreißermaskierung oder unvollständige Erfassung entstehen. Ziel ist eine \emph{konservative} Wiederherstellung: Es werden nur kurze, lokal begrenzte Lücken gefüllt; größere Ausfälle bleiben als Unsicherheitsbereiche markiert und fließen nicht in abgeleitete Kenngrößen ein. Der Rekonstruktionsschritt nutzt ausschließlich lokale Nachbarschaftsinformationen, um die charakteristische Profil- bzw.\ Kantenstruktur zu erhalten und unnötige Verfälschungen zu vermeiden. \emph{Die hier beschriebenen Rekonstruktionsschritte werden im Rahmen der Edelstahl-Anpassungen primär für den Burr-Kanal genutzt; die Rauheits-Pipeline verbleibt mit den bewährten Baustahlparametern.}
+
+Das Verfahren wird sowohl auf eindimensionale Profile (entlang der Schnittkante) als auch auf flächige Daten angewendet. Bei Flächen erfolgt die Rekonstruktion achsweise entlang sinnvoller Richtungen, sodass die lokale Geometrie bestmöglich bewahrt bleibt. Zusätzlich werden rekonstruierte Punkte explizit gekennzeichnet, sodass die Nachvollziehbarkeit zwischen gemessenen und interpolierten Werten jederzeit gegeben ist. Plausibilitätsprüfungen (u.\,a.\ Anteil fehlender Werte, maximale Lückenlänge) stellen sicher, dass nur hinreichend kleine und stabile Lücken geschlossen werden; andernfalls wird auf eine Rekonstruktion verzichtet.
+
+In der Interpolations-Pipeline wurden \emph{keine Konstanten geändert}. Insbesondere bleiben Grenzwerte für die maximale Lückenlänge sowie etwaige Glättungs- und Fensterparameter gegenüber der Baustahlkonfiguration unverändert, um die Vergleichbarkeit zwischen Materialklassen sicherzustellen. Der zugehörige Quellcode ist im Anhang dokumentiert.
