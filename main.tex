@@ -19,8 +19,12 @@
 %%% Deckblatt gemäß DHBW-Vorgaben einbinden (keine Anpassung nötig) %%% 
 \input{template/_dhbw_deckblatt.tex}
 
-
 \pagenumbering{Roman}
+
+\input{includes/sperrvermerk.tex}
+\input{includes/ehrenwoertliche_erklaerung.tex}
+\input{includes/kurzreferat.tex}
+\input{includes/abstract.tex}
 
 % \input{includes/abstract.tex}
 
@@ -68,6 +72,7 @@
 \input{includes/versuchsplanung_zur_identifikation_von_schnittabrissgrenzen}
 \input{includes/datengenerierung_experimentelplans.tex}
 \input{includes/messmethodik_datenerfassung_messzelle.tex}
+\input{includes/reflexion_ausblick.tex}
 
 % \blinddocument
 %%% Ende des eigentlichen Inhalts %%%
@@ -75,8 +80,8 @@
 
 %%% Quellenverzeichnisse (keine Anpassung nötig) %%%
 \clearpage
-\literaturverzeichnis
 \input{includes/anhang.tex}
+\literaturverzeichnis
 %%% Ende Quellenverzeichnisse %%%
 
 
