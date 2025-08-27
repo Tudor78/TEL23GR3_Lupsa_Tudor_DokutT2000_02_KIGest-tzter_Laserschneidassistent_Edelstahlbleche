@@ -16,5 +16,56 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{ISO11145-2018}{standard}{}{}
+      \list{organization}{1}{%
+        {International Organization for Standardization}%
+      }
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{number}{ISO 11145:2018}
+      \field{title}{Optics and photonics — Lasers and laser-related equipment — Vocabulary and symbols}
+      \field{urlday}{27}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.iso.org/standard/72944.html
+      \endverb
+      \verb{url}
+      \verb https://www.iso.org/standard/72944.html
+      \endverb
+    \endentry
+    \entry{ISO9013-2017}{standard}{}{}
+      \list{organization}{1}{%
+        {International Organization for Standardization}%
+      }
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{number}{ISO 9013:2017}
+      \field{title}{Thermal cutting — Classification of thermal cuts — Geometrical product specification and quality tolerances}
+      \field{urlday}{27}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.iso.org/standard/60321.html
+      \endverb
+      \verb{url}
+      \verb https://www.iso.org/standard/60321.html
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

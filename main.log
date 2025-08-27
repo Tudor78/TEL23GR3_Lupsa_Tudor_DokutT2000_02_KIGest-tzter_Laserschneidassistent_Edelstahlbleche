@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.30)  26 AUG 2025 10:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.30)  27 AUG 2025 15:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1084,54 +1084,95 @@ Package babel Info: 'ngerman' activates 'ngerman' shorthands.
 (babel)             Reported on input line 1.
 [2]
 chapter 2.
-) (includes/stand_der_technik.tex
+
 
 [3
 
 ]
+
+[4]
+<img/burr_roughness_schaubild.png, id=206, 770.88pt x 184.69pt>
+File: img/burr_roughness_schaubild.png Graphic file (type png)
+<use img/burr_roughness_schaubild.png>
+Package pdftex.def Info: img/burr_roughness_schaubild.png  used on input line 38.
+(pdftex.def)             Requested size: 455.24411pt x 109.0676pt.
+) (includes/stand_der_technik.tex
+
+[5 <./img/burr_roughness_schaubild.png (PNG copy)>]
 chapter 3.
 ) (includes/versuchsplanung_zur_identifikation_von_schnittabrissgrenzen.tex
 
-[4
+[6
 
 ]
 chapter 4.
 
 
-[5
-
-]) (includes/datengenerierung_experimentelplans.tex
-
-[6]
-chapter 5.
-) (includes/messmethodik_datenerfassung_messzelle.tex
-
 [7
 
-]
-chapter 6.
+]) (includes/messmethodik_datenerfassung_messzelle.tex
 
-Overfull \hbox (2.07515pt too wide) in paragraph at lines 5--6
-[]\T1/cmr/m/n/10.95 Im An-schluss wer-den an ei-ner bild-ge-ben-den Sta-ti-on hoch-auf-ge-l�s-te Auf-nah-men der ers-ten Schnitt-
- []
+[8]
+chapter 5.
+<img/handscanner_keyence.jpg, id=229, 3752.0175pt x 2813.51125pt>
+File: img/handscanner_keyence.jpg Graphic file (type jpg)
+<use img/handscanner_keyence.jpg>
+Package pdftex.def Info: img/handscanner_keyence.jpg  used on input line 9.
+(pdftex.def)             Requested size: 318.66948pt x 238.9521pt.
 
 
+[9
 
-[8
+ <./img/handscanner_keyence.jpg>]
+<img/smartphone_industriekamera.jpg, id=235, 4047.12pt x 3035.34pt>
+File: img/smartphone_industriekamera.jpg Graphic file (type jpg)
+<use img/smartphone_industriekamera.jpg>
+Package pdftex.def Info: img/smartphone_industriekamera.jpg  used on input line 20.
+(pdftex.def)             Requested size: 318.66948pt x 238.98798pt.
 
-]
 
-[9] (C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+[10 <./img/smartphone_industriekamera.jpg>]
+<img/burr_baustahl.png, id=244, 242.40562pt x 182.18062pt>
+File: img/burr_baustahl.png Graphic file (type png)
+<use img/burr_baustahl.png>
+Package pdftex.def Info: img/burr_baustahl.png  used on input line 40.
+(pdftex.def)             Requested size: 218.51521pt x 164.23344pt.
+<img/burr_edelstahl.png, id=245, 240.14719pt x 180.675pt>
+File: img/burr_edelstahl.png Graphic file (type png)
+<use img/burr_edelstahl.png>
+Package pdftex.def Info: img/burr_edelstahl.png  used on input line 46.
+(pdftex.def)             Requested size: 218.51521pt x 164.40346pt.
+<img/roughness_baustahl.png, id=246, 242.40562pt x 179.16937pt>
+File: img/roughness_baustahl.png Graphic file (type png)
+<use img/roughness_baustahl.png>
+Package pdftex.def Info: img/roughness_baustahl.png  used on input line 56.
+(pdftex.def)             Requested size: 218.51521pt x 161.51886pt.
+<img/roughness_edelstahl.png, id=247, 242.40562pt x 182.18062pt>
+File: img/roughness_edelstahl.png Graphic file (type png)
+<use img/roughness_edelstahl.png>
+Package pdftex.def Info: img/roughness_edelstahl.png  used on input line 62.
+(pdftex.def)             Requested size: 218.51521pt x 164.23344pt.
+
+
+[11]
+
+[12 <./img/burr_baustahl.png> <./img/burr_edelstahl.png> <./img/roughness_baustahl.png> <./img/roughness_edelstahl.png>]
+<img/Werkstück_Proben-ID.jpg, id=261, 728.4816pt x 409.7709pt>
+File: img/Werkstück_Proben-ID.jpg Graphic file (type jpg)
+<use img/Werkstück_Proben-ID.jpg>
+Package pdftex.def Info: img/Werkstück_Proben-ID.jpg  used on input line 78.
+(pdftex.def)             Requested size: 318.66948pt x 179.24931pt.
+ (C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 29.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 86.
 
 
-[10]
+[13 <./img/Werkstück_Proben-ID.jpg>]
 
-[11]
-Overfull \hbox (1.88834pt too wide) in paragraph at lines 73--74
+[14]
+Overfull \hbox (1.88834pt too wide) in paragraph at lines 131--132
 \T1/cmtt/m/n/10.95 smooth_nan_values \T1/cmr/m/n/10.95 re-kon-stru-iert, um nu-me-ri-sches Rau-schen zu re-du-zie-ren, oh-ne re-le-van-te Struk-
  []
 
@@ -1139,32 +1180,41 @@ Overfull \hbox (1.88834pt too wide) in paragraph at lines 73--74
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
 
-[12]
+[15]
 
-[13]) (includes/reflexion_ausblick.tex
+[16]) (includes/reflexion_ausblick.tex
 
-[14]
-chapter 7.
+[17]
+chapter 6.
 )
 
-[15
+[18
 
 ] (includes/anhang.tex
 chapter without number
 
 
-[16
+[19
 
 
 ]
 
-[17])
+[20])
 
-LaTeX Warning: Empty bibliography on input line 84.
+[21]
+
+Package biblatex Warning: No driver for 'standard'.
+(biblatex)                Using fallback driver on input line 83.
+
+
+Package biblatex Warning: No driver for 'standard'.
+(biblatex)                Using fallback driver on input line 83.
 
 
 
-[18] (main.aux)
+[22
+
+] (main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-19>
@@ -1174,17 +1224,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31196 strings out of 468149
- 619581 string characters out of 5430114
- 1827293 words of memory out of 5000000
- 59124 multiletter control sequences out of 15000+600000
- 652656 words of font info for 99 fonts, out of 8000000 for 9000
+ 31538 strings out of 468149
+ 627157 string characters out of 5430114
+ 1829683 words of memory out of 5000000
+ 59448 multiletter control sequences out of 15000+600000
+ 653332 words of font info for 100 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 108i,18n,127p,10998b,2380s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcit1000.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecit1000.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1095.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0900.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0900.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0900.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1728.pk><C:/Users/lupsatu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/lupsatu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/lupsatu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/lupsatu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/lupsatu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (28 pages, 422274 bytes).
+ 108i,18n,127p,10998b,2386s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcit1000.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecit1000.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1095.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0900.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0900.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0900.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1728.pk><C:/Users/lupsatu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/lupsatu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/lupsatu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/lupsatu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/lupsatu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/lupsatu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on main.pdf (32 pages, 7617615 bytes).
 PDF statistics:
- 1349 PDF objects out of 1440 (max. 8388607)
- 250 named destinations out of 1000 (max. 500000)
- 211 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1476 PDF objects out of 1728 (max. 8388607)
+ 270 named destinations out of 1000 (max. 500000)
+ 291 words of extra memory for PDF output out of 10000 (max. 10000000)
 
