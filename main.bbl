@@ -19,6 +19,39 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
+    \entry{ZahnerStainlessReflect}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ac220886f1981f554c1959d3caedc485}{%
+           family={{A. Zahner Company}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{ac220886f1981f554c1959d3caedc485}
+      \strng{fullhash}{ac220886f1981f554c1959d3caedc485}
+      \strng{fullhashraw}{ac220886f1981f554c1959d3caedc485}
+      \strng{bibnamehash}{ac220886f1981f554c1959d3caedc485}
+      \strng{authorbibnamehash}{ac220886f1981f554c1959d3caedc485}
+      \strng{authornamehash}{ac220886f1981f554c1959d3caedc485}
+      \strng{authorfullhash}{ac220886f1981f554c1959d3caedc485}
+      \strng{authorfullhashraw}{ac220886f1981f554c1959d3caedc485}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Stainless Steel}
+      \field{urlday}{28}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.azahner.com/metal-info/stainless-steel/
+      \endverb
+      \verb{url}
+      \verb https://www.azahner.com/metal-info/stainless-steel/
+      \endverb
+    \endentry
     \entry{FischerPochwyt_NeuronaleNetze_2017}{online}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=363ee5f5bad13c9c37bd6e75bc82d224}{%
@@ -51,13 +84,14 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Sphinx-Dokumentation zum Projekt \enquote{Autonomer Roboter}}
-      \field{subtitle}{Convolutional Neural Networks am Beispiel eines selbstfahrenden Roboters — Dokumentation}
+      \field{langid}{german}
+      \field{subtitle}{Convolutional Neural Networks am Beispiel eines selbstfahrenden Roboters: Dokumentation}
       \field{title}{Neuronale Netze}
       \field{urlday}{28}
       \field{urlmonth}{8}
       \field{urlyear}{2025}
       \field{year}{2017}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://user.phil.hhu.de/~petersen/SoSe17_Teamprojekt/AR/neuronalenetze.html
@@ -66,21 +100,78 @@
       \verb https://user.phil.hhu.de/~petersen/SoSe17_Teamprojekt/AR/neuronalenetze.html
       \endverb
     \endentry
-    \entry{ISO11145-2018}{standard}{}{}
-      \list{organization}{1}{%
-        {International Organization for Standardization}%
+    \entry{ISO9013-2017}{standard}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7058e4bd76f877c52b621c942b30613c}{%
+           family={{International Organization for Standardization}},
+           familyi={I\bibinitperiod}}}%
       }
-      \field{sortinit}{O}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \list{location}{1}{%
+        {Geneva}%
+      }
+      \strng{namehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \strng{bibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorbibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authornamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \field{extraname}{1}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{number}{ISO 9013:2017}
+      \field{title}{Thermal Cutting: Classification of Thermal Cuts: Geometrical Product Specification and Quality Tolerances}
+      \field{urlday}{27}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.iso.org/standard/60321.html
+      \endverb
+      \verb{url}
+      \verb https://www.iso.org/standard/60321.html
+      \endverb
+    \endentry
+    \entry{ISO11145-2018}{standard}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7058e4bd76f877c52b621c942b30613c}{%
+           family={{International Organization for Standardization}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Geneva}%
+      }
+      \strng{namehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \strng{bibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorbibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authornamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \field{extraname}{2}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
       \field{number}{ISO 11145:2018}
-      \field{title}{Optics and photonics — Lasers and laser-related equipment — Vocabulary and symbols}
+      \field{title}{Optics and Photonics: Lasers and Laser-Related Equipment: Vocabulary and Symbols}
       \field{urlday}{27}
       \field{urlmonth}{8}
       \field{urlyear}{2025}
       \field{year}{2018}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.iso.org/standard/72944.html
@@ -89,21 +180,66 @@
       \verb https://www.iso.org/standard/72944.html
       \endverb
     \endentry
-    \entry{MitutoyoQuickGuide}{manual}{}{}
-      \list{organization}{1}{%
-        {Mitutoyo Corporation}%
+    \entry{KeyenceISO4287}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6907a2be1822466b6646454a79ba6d5a}{%
+           family={{KEYENCE Corporation}},
+           familyi={K\bibinitperiod}}}%
       }
-      \field{sortinit}{Q}
-      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
+      \strng{namehash}{6907a2be1822466b6646454a79ba6d5a}
+      \strng{fullhash}{6907a2be1822466b6646454a79ba6d5a}
+      \strng{fullhashraw}{6907a2be1822466b6646454a79ba6d5a}
+      \strng{bibnamehash}{6907a2be1822466b6646454a79ba6d5a}
+      \strng{authorbibnamehash}{6907a2be1822466b6646454a79ba6d5a}
+      \strng{authornamehash}{6907a2be1822466b6646454a79ba6d5a}
+      \strng{authorfullhash}{6907a2be1822466b6646454a79ba6d5a}
+      \strng{authorfullhashraw}{6907a2be1822466b6646454a79ba6d5a}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Surface Roughness Parameters: ISO 4287 Overview}
+      \field{urlday}{28}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.keyence.com/ss/products/microscope/roughness/line/parameters.jsp
+      \endverb
+      \verb{url}
+      \verb https://www.keyence.com/ss/products/microscope/roughness/line/parameters.jsp
+      \endverb
+    \endentry
+    \entry{MitutoyoQuickGuide}{manual}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0209ca6149a1ae70eaad42334de51f20}{%
+           family={{Mitutoyo Corporation}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{0209ca6149a1ae70eaad42334de51f20}
+      \strng{fullhash}{0209ca6149a1ae70eaad42334de51f20}
+      \strng{fullhashraw}{0209ca6149a1ae70eaad42334de51f20}
+      \strng{bibnamehash}{0209ca6149a1ae70eaad42334de51f20}
+      \strng{authorbibnamehash}{0209ca6149a1ae70eaad42334de51f20}
+      \strng{authornamehash}{0209ca6149a1ae70eaad42334de51f20}
+      \strng{authorfullhash}{0209ca6149a1ae70eaad42334de51f20}
+      \strng{authorfullhashraw}{0209ca6149a1ae70eaad42334de51f20}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Enthält Formeln und Definitionen zu Ra und Rz}
+      \field{langid}{english}
       \field{title}{Quick Guide to Surface Roughness Measurement}
       \field{urlday}{28}
       \field{urlmonth}{8}
       \field{urlyear}{2025}
       \field{year}{2016}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.mitutoyo.com/webfoo/wp-content/uploads/1984_Surf_Roughness_PG.pdf
@@ -112,71 +248,41 @@
       \verb https://www.mitutoyo.com/webfoo/wp-content/uploads/1984_Surf_Roughness_PG.pdf
       \endverb
     \endentry
-    \entry{ZahnerStainlessReflect}{online}{}{}
-      \list{organization}{1}{%
-        {A. Zahner Company}%
+    \entry{Timesavers_Rauheit_Ra}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=25aa7b6b95356f5fa16be6224e89a215}{%
+           family={{Timesavers International}},
+           familyi={T\bibinitperiod}}}%
       }
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
-      \field{labeltitlesource}{title}
-      \field{note}{Angabe von \(\sim49\%\) sichtbarer Reflexion für Edelstahl}
-      \field{title}{Stainless Steel}
-      \field{urlday}{28}
-      \field{urlmonth}{8}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.azahner.com/metal-info/stainless-steel/
-      \endverb
-      \verb{url}
-      \verb https://www.azahner.com/metal-info/stainless-steel/
-      \endverb
-    \endentry
-    \entry{KeyenceISO4287}{online}{}{}
-      \list{organization}{1}{%
-        {KEYENCE}%
-      }
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
-      \field{labeltitlesource}{title}
-      \field{note}{Erklärt Ra und Rz, Sampling Length \(X_s\) und Auswertelänge}
-      \field{title}{Surface Roughness Parameters — ISO 4287 overview}
-      \field{urlday}{28}
-      \field{urlmonth}{8}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.keyence.com/ss/products/microscope/roughness/line/parameters.jsp
-      \endverb
-      \verb{url}
-      \verb https://www.keyence.com/ss/products/microscope/roughness/line/parameters.jsp
-      \endverb
-    \endentry
-    \entry{ISO9013-2017}{standard}{}{}
-      \list{organization}{1}{%
-        {International Organization for Standardization}%
-      }
+      \strng{namehash}{25aa7b6b95356f5fa16be6224e89a215}
+      \strng{fullhash}{25aa7b6b95356f5fa16be6224e89a215}
+      \strng{fullhashraw}{25aa7b6b95356f5fa16be6224e89a215}
+      \strng{bibnamehash}{25aa7b6b95356f5fa16be6224e89a215}
+      \strng{authorbibnamehash}{25aa7b6b95356f5fa16be6224e89a215}
+      \strng{authornamehash}{25aa7b6b95356f5fa16be6224e89a215}
+      \strng{authorfullhash}{25aa7b6b95356f5fa16be6224e89a215}
+      \strng{authorfullhashraw}{25aa7b6b95356f5fa16be6224e89a215}
       \field{sortinit}{T}
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{number}{ISO 9013:2017}
-      \field{title}{Thermal cutting — Classification of thermal cuts — Geometrical product specification and quality tolerances}
-      \field{urlday}{27}
+      \field{day}{29}
+      \field{langid}{german}
+      \field{month}{7}
+      \field{title}{Alles was Sie über die Rauheit der Oberfläche (Ra) wissen müssen}
+      \field{urlday}{28}
       \field{urlmonth}{8}
       \field{urlyear}{2025}
-      \field{year}{2017}
+      \field{year}{2021}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://www.iso.org/standard/60321.html
+      \verb https://www.timesaversint.com/de/Wissensdatenbank/alles-was-sie-ueber-die-rauheit-der-oberflaeche-ra-wissen-muessen/
       \endverb
       \verb{url}
-      \verb https://www.iso.org/standard/60321.html
+      \verb https://www.timesaversint.com/de/Wissensdatenbank/alles-was-sie-ueber-die-rauheit-der-oberflaeche-ra-wissen-muessen/
       \endverb
     \endentry
   \enddatalist
