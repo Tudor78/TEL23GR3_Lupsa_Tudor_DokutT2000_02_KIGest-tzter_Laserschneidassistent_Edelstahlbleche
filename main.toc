@@ -13,19 +13,21 @@
 \contentsline {chapter}{\numberline {2}Grundlagen}{3}{chapter.13}%
 \contentsline {section}{\numberline {2.1}Laserlichtschneiden}{3}{section.14}%
 \contentsline {section}{\numberline {2.2}Grat und Rauheit eines Blechteils}{4}{section.15}%
-\contentsline {section}{\numberline {2.3}CNNs}{5}{section.18}%
-\contentsline {chapter}{\numberline {3}Stand der Technik}{6}{chapter.19}%
-\contentsline {section}{\numberline {3.1}KI-gestütesztes Laserschneiden - Cutting Assistent}{6}{section.20}%
-\contentsline {section}{\numberline {3.2}3D-Messsystem - Keyence}{6}{section.21}%
-\contentsline {chapter}{\numberline {4}Identifikation der Schnittabrissgrenze und Datengenerierung}{7}{chapter.22}%
-\contentsline {chapter}{\numberline {5}Messmethodik und Datenerfassung in der Messzelle}{9}{chapter.23}%
-\contentsline {section}{\numberline {5.1}Anpassung des Handscanner-Setups}{11}{section.26}%
-\contentsline {section}{\numberline {5.2}Optimierung der Vektorberechnung aus 3D-Punktwolken}{14}{section.59}%
-\contentsline {subsection}{\numberline {5.2.1}Outlier Detection/Correction}{15}{subsection.60}%
-\contentsline {subsection}{\numberline {5.2.2}Interpolation}{17}{subsection.114}%
-\contentsline {section}{\numberline {5.3}Validierung der Messoptimierungen}{17}{section.115}%
-\contentsline {chapter}{\numberline {6}Reflexion und Ausblick}{18}{chapter.116}%
-\contentsline {section}{\numberline {6.1}Reflexion}{18}{section.117}%
-\contentsline {section}{\numberline {6.2}Ausblick}{18}{section.118}%
-\contentsline {chapter}{\nonumberline Anhang}{19}{chapter*.119}%
-\contentsline {chapter}{Literaturverzeichnis}{21}{section*.235}%
+\contentsline {section}{\numberline {2.3}Convolutional Neural Networks (CNNs)}{5}{section.18}%
+\contentsline {chapter}{\numberline {3}Stand der Technik}{7}{chapter.20}%
+\contentsline {section}{\numberline {3.1}KI-gestütesztes Laserschneiden - Cutting Assistent}{7}{section.21}%
+\contentsline {section}{\numberline {3.2}3D-Messsystem - Keyence}{7}{section.22}%
+\contentsline {chapter}{\numberline {4}Identifikation der Schnittabrissgrenze und Datengenerierung}{8}{chapter.23}%
+\contentsline {chapter}{\numberline {5}Messmethodik und Datenerfassung in der Messzelle}{10}{chapter.24}%
+\contentsline {section}{\numberline {5.1}Anpassung des Handscanner-Setups}{13}{section.29}%
+\contentsline {section}{\numberline {5.2}Optimierung der Vektorberechnung aus 3D-Punktwolken}{16}{section.62}%
+\contentsline {subsection}{\numberline {5.2.1}Outlier Detection/Correction des Gratverlaufs}{17}{subsection.63}%
+\contentsline {subsection}{\numberline {5.2.2}Interpolation des Gratverlaufs}{19}{subsection.117}%
+\contentsline {section}{\numberline {5.3}Validierung der Messoptimierungen}{19}{section.118}%
+\contentsline {subsection}{\numberline {5.3.1}Validierung der verbesserten Ausreißererkennung im Burr-Kanal}{19}{subsection.119}%
+\contentsline {subsection}{\numberline {5.3.2}Validierung der bestehenden Rauheitsanalyse an den neuen Edelsdtahldaten}{20}{subsection.121}%
+\contentsline {chapter}{\numberline {6}Reflexion und Ausblick}{21}{chapter.122}%
+\contentsline {section}{\numberline {6.1}Reflexion}{21}{section.123}%
+\contentsline {section}{\numberline {6.2}Ausblick}{21}{section.124}%
+\contentsline {chapter}{\nonumberline Anhang}{22}{chapter*.125}%
+\contentsline {chapter}{Literaturverzeichnis}{24}{section*.241}%

@@ -19,6 +19,53 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
+    \entry{FischerPochwyt_NeuronaleNetze_2017}{online}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=363ee5f5bad13c9c37bd6e75bc82d224}{%
+           family={Fischer},
+           familyi={F\bibinitperiod},
+           given={Julia},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3891bd86ecdeb0e4fad3892e822f167f}{%
+           family={Pochwyt},
+           familyi={P\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Heinrich-Heine-Universität Düsseldorf}%
+      }
+      \strng{namehash}{b094bdc7742c2a9d4b08173bdc6afb92}
+      \strng{fullhash}{b094bdc7742c2a9d4b08173bdc6afb92}
+      \strng{fullhashraw}{b094bdc7742c2a9d4b08173bdc6afb92}
+      \strng{bibnamehash}{b094bdc7742c2a9d4b08173bdc6afb92}
+      \strng{authorbibnamehash}{b094bdc7742c2a9d4b08173bdc6afb92}
+      \strng{authornamehash}{b094bdc7742c2a9d4b08173bdc6afb92}
+      \strng{authorfullhash}{b094bdc7742c2a9d4b08173bdc6afb92}
+      \strng{authorfullhashraw}{b094bdc7742c2a9d4b08173bdc6afb92}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Sphinx-Dokumentation zum Projekt \enquote{Autonomer Roboter}}
+      \field{subtitle}{Convolutional Neural Networks am Beispiel eines selbstfahrenden Roboters — Dokumentation}
+      \field{title}{Neuronale Netze}
+      \field{urlday}{28}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://user.phil.hhu.de/~petersen/SoSe17_Teamprojekt/AR/neuronalenetze.html
+      \endverb
+      \verb{url}
+      \verb https://user.phil.hhu.de/~petersen/SoSe17_Teamprojekt/AR/neuronalenetze.html
+      \endverb
+    \endentry
     \entry{ISO11145-2018}{standard}{}{}
       \list{organization}{1}{%
         {International Organization for Standardization}%
@@ -63,6 +110,28 @@
       \endverb
       \verb{url}
       \verb https://www.mitutoyo.com/webfoo/wp-content/uploads/1984_Surf_Roughness_PG.pdf
+      \endverb
+    \endentry
+    \entry{ZahnerStainlessReflect}{online}{}{}
+      \list{organization}{1}{%
+        {A. Zahner Company}%
+      }
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{note}{Angabe von \(\sim49\%\) sichtbarer Reflexion für Edelstahl}
+      \field{title}{Stainless Steel}
+      \field{urlday}{28}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.azahner.com/metal-info/stainless-steel/
+      \endverb
+      \verb{url}
+      \verb https://www.azahner.com/metal-info/stainless-steel/
       \endverb
     \endentry
     \entry{KeyenceISO4287}{online}{}{}

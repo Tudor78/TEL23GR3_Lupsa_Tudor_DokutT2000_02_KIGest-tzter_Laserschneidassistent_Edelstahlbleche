@@ -2,11 +2,12 @@
 
 Die Messzelle dient der reproduzierbaren Erfassung aller Messdaten zu den im Rahmen der Experimentalpläne geschnittenen Edelstahlbauteilen. Sie ist als sequenzieller Messprozess ausgelegt, in dem ein mehrachsiger KUKA-Industrieroboter die Proben zwischen den Stationen handhabt. Die Bauteile werden an der Startposition gestapelt bereitgestellt, vom Roboter mittels Vakuumgreifer aufgenommen und der ersten Station zugeführt. Dort erfolgt die automatisierte Probenidentifikation über einen aufgebrachten QR-Code (siehe ID-Lesegerät in Abbildung ~\ref{fig:handscanner_barcodelesegerät_keyence}). Die ermittelte Proben-ID wird mit den Metadaten aus den Experimentalplänen (z.\,B. Blechdicke, Soll-Parameter) verknüpft und dient in der Folge als Schlüssel für die Mess- und Auswertedaten.
 
-Im Anschluss werden an einer Station hochaufgelöste Aufnahmen der ersten Schnittkante erfasst. Hierzu kommt ein Handscanner (siehe Abbildung ~\ref{fig:handscanner_barcodelesegerät_keyence})zum Einsatz, dessen Aufnahmeparameter, wie z.B. Arbeitsabstand, Belichtung und  Auflösung, konstant gehalten werden. Diese Bilddaten bilden die Grundlage für die bildgestützte Qualitätsschätzung des KI-Systems. Ergänzend dazu wird die gleiche Schnittkante mit einem Keyence-3D-Messsystem (siehe Abbildung ~\ref{fig:handscanner_barcodelesegerät_keyence}) dreidimensional vermessen, sodass eine 3D-Punktwolke des Kantenverlaufs entsteht. Aus dieser Punktwolke werden definierte Profilverläufe abgeleitet und geometrische Kenngrößen berechnet, die der Erfassung von Gratbildung und der Oberflächenrauheit dienen. Die so gewonnenen Ist-Kenngrößen fungieren als Referenz für den späteren Abgleich mit der Bildqualitätsschätzung. In der Abbildung ~\ref{fig:handscanner_barcodelesegerät_keyence} sind die im obigen Abschnitt beschriebenen Komponenten der Messzelle während einer Messung.
+Im Anschluss werden an einer Station hochaufgelöste Aufnahmen der ersten Schnittkante erfasst. Hierzu kommt ein Handscanner (siehe Abbildung ~\ref{fig:handscanner_barcodelesegerät_keyence})zum Einsatz, dessen Aufnahmeparameter, wie z.B. Arbeitsabstand, Belichtung und  Auflösung, konstant gehalten werden. Diese Bilddaten bilden die Grundlage für die bildgestützte Qualitätsschätzung des KI-Systems. Ergänzend dazu wird die gleiche Schnittkante mit einem Keyence-3D-Messsystem (siehe Abbildung ~\ref{fig:handscanner_barcodelesegerät_keyence}) dreidimensional vermessen, sodass eine 3D-Punktwolke des Kantenverlaufs entsteht. Aus dieser Punktwolke werden definierte Profilverläufe abgeleitet und geometrische Kenngrößen berechnet, die der Erfassung von Gratbildung und der Oberflächenrauheit dienen. Die Berechnung des Grates und der Rauheit ist im obigen Grundalgenkapitel ~\ref{sec:grat-rauheit} näher erläutert. Die genaue funktionsweise des 3D-Messsystems ist im folgenden Kapitel ~\ref{sec:3d-messsystem-keyence} ausgiebig erläutert. Die so gewonnenen Ist-Kenngrößen fungieren als Referenz für den späteren Abgleich mit der Bildqualitätsschätzung. In der Abbildung ~\ref{fig:handscanner_barcodelesegerät_keyence} sind die im obigen Abschnitt beschriebenen Komponenten der Messzelle während einer Messung.
 
+In der folgenden Abbildung ~\ref{fig:handscanner_barcodelesegerät_keyence} sind die im obigen Abschnitt beschriebenen Komponenten der Messzelle während einer Messung dargestellt.
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.7\linewidth]{handscanner_keyence.jpg}
+    \includegraphics[width=0.6\linewidth]{handscanner_keyence.jpg}
     \caption{Handscanner (1), ID-Lesegerät (2), Keyence 3D-Messsystem (3) in der Messzelle}
     \label{fig:handscanner_barcodelesegerät_keyence}
 \end{figure}
@@ -15,20 +16,43 @@ Im Anschluss werden an einer Station hochaufgelöste Aufnahmen der ersten Schnit
 
 Zur vollständigen Dokumentation werden die Schnittkanten zudem mit einer Industriekamera und einem stationären Smartphone-Setup unter verschiedenen Beleuchtungsbedingungen aufgenommen. Die Kombination aus unterschiedlichen Kameras und Beleuchtungen erhöht die Robustheit der visuellen Beurteilbarkeit und unterstützt die spätere manuelle Nachvollziehbarkeit von Auffälligkeiten. Die erfassten Messdaten des Werkstücks, sowie die daraus abgeleiteten Kenngrößen der Proben-ID zugeordnet und in die zentrale Datenbank überführt.
 
+Die Abbildung~\ref{fig:smartphone_industriekamera} zeigt die zuvor beschriebenen Komponenten der Messzelle. Oben im Bild ist das Smartphone (4) mit LED-Ringlicht zu sehen, welches die Schnittkante aus einem flachen Winkel aufnimmt. Unten im Bild ist die Industriekamera (5) mit Auflichtbeleuchtung dargestellt, welche die Schnittkante ebenfalls aus einem flachen Winkel erfasst. Beide Kameras sind fest in der Messzelle montiert und werden automatisch durch den Roboter angesteuert.
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.7\linewidth]{smartphone_industriekamera.jpg}
+    \includegraphics[width=0.6\linewidth]{smartphone_industriekamera.jpg}
     \caption{Smartphone (4) und Industriekamera (5) in der Messzelle}
     \label{fig:smartphone_industriekamera}
 \end{figure}
 
 Nach der Datenerfassung werden aus der 3D-Messung die tatsächlichen Kenngrößen der Schnittkante berechnet und den Ergebnissen der bildbasierten Qualitätsschätzung gegenübergestellt. Dieser Abgleich ermöglicht die Beurteilung der Übereinstimmung zwischen qualitativer, bildgestützter Bewertung und quantitativer Geometriemessung. Die beschriebenen Messschritte werden für alle vier Schnittkanten jedes Bauteils identisch wiederholt. Abschließend legt der Roboter die vollständig vermessenen Proben an der Endstation geordnet ab.
 
+Anbei ist ein besipielhafter Vergleich der geschätzten Kenngrößen einer Schnittkante im Vergleich zu den gemessenen Kenngrößen in den Abbildungen  ~\ref{fig:burr_true_pred} und ~\ref{fig:roughness_true_pred} dargestellt. Es sind jeweils zwei Diagramme zu sehen, einer für den Gratwert und einer für die Rauheit. Auf den y-Achsen sind die geschätzten Kenngrößen und auf der x-Achse die gemessenen Kenngrößen aufgetragen. Idealerweise liegen alle Punkte auf der Diagonalen, was eine perfekte Übereinstimmung zwischen Schätzung und Messung bedeuten würde. In disem Beispiel Überschätzt das KI-Modell den Rauheitswert leicht, whärend der Gratwert überwiegend "gut" geschätzt wird. Mit einer leichten Abweichung ist stets zu rechnen, da die bildbasierte Schätzung eine Näherung darstellt und nicht alle Details der 3D-Messung erfassen kann.
+
+\begin{figure}[h!]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{qualitatsschatzung_burr.png}
+        \caption{Vergleich zwischen vorhergesagten und tatsächlichen Werten für den Grat (Burr).}
+        \label{fig:burr_true_pred}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{qualitatsschatzung_roughness.png}
+        \caption{Vergleich zwischen vorhergesagten und tatsächlichen Werten für die Rauheit (Roughness).}
+        \label{fig:roughness_true_pred}
+    \end{minipage}
+\end{figure}
+
+
+
 \newpage
 
 \section{Anpassung des Handscanner-Setups}
+\label{chap:handscanner-setup}
 
-Für die bildgestützte Qualitätsschätzung werden die mit dem Handscanner aufgenommenen Schnittkantenbilder als zentrale Eingangsgröße verwendet. Die bisher im Einsatz befindlichen Aufnahmeparameter waren für Baustahl optimiert. Baustahl weist im Vergleich zu Edelstahl eine geringere Oberflächenreflexion und eine tendenziell matte Erscheinung auf. Werden diese Einstellungen unverändert auf Edelstahl angewandt, führt die höhere Reflexion zu Bildartefakten und zu einer unzureichenden Abbildung der relevanten Mikrostruktur. In der Folge würden Grate (\emph{engl. Burr}) unterrepräsentiert und die Rauheit (\emph{engl. Roughness}) potenziell verfälscht erscheinen. Da die Klassifikation der Bildqualität und die darauf basierende Schätzung von \emph{Burr} und \emph{Roughness} unmittelbar in die Parametrierung des Laserschneidprozesses zurückwirken, ist eine werkstoffabhängige Anpassung des Handscanner-Setups zwingend erforderlich.
+Für die bildgestützte Qualitätsschätzung werden die mit dem Handscanner aufgenommenen Schnittkantenbilder als zentrale Eingangsgröße verwendet. Die bisher im Einsatz befindlichen Aufnahmeparameter waren für Baustahl optimiert. Baustahl weist im Vergleich zu Edelstahl eine geringere Oberflächenreflexion und eine tendenziell matte Erscheinung auf. Werden diese Einstellungen unverändert auf Edelstahl angewandt, führt die höhere Reflexion zu Bildartefakten und zu einer unzureichenden Abbildung der relevanten Mikrostruktur \parencite{ZahnerStainlessReflect}. In der Folge würden Grate (\emph{engl. Burr}) unterrepräsentiert und die Rauheit (\emph{engl. Roughness}) potenziell verfälscht erscheinen. Da die Klassifikation der Bildqualität und die darauf basierende Schätzung von \emph{Burr} und \emph{Roughness} unmittelbar in die Parametrierung des Laserschneidprozesses zurückwirken, ist eine werkstoffabhängige Anpassung des Handscanner-Setups zwingend erforderlich.
 
 Das Aufnahmeprotokoll sieht pro Schnittkante drei Bilder vor: (i) ein bewusst dunkler belichtetes Bild, das primär der Beurteilung der Schnittflächenrauheit dient, sowie (ii) zwei überbelichtete Bilder, die gemeinsam mit dem ersten zu einem HDR-Komposit zusammengeführt werden, um die Kontur und Ausprägung des Grats sicher zu erfassen. Die Kalibrierung der Belichtung erfolgt schrittweise. Zunächst wird die Belichtungszeit für das Rauheitsbild so eingestellt, dass die Textur der Schnittfläche ohne Sättigung und mit klarer Detailzeichnung sichtbar ist. Diese Entscheidung erfolgt in dieser Phase bewusst subjektiv, jedoch anhand vorab definierter visueller Kriterien, wie z.B. ausreichender Tonwertumfang und erkennbarer Strukturkontrast. Im Anschluss werden die Belichtungsparameter der beiden HDR-Bilder iterativ variiert, bis der Grat entlang der Schnittkante über den gesamten Bildbereich eindeutig detektierbar ist, ohne dass umliegende Bereiche vollständig verloren gehen. Da die HDR-Komposition durch die Eingangsbilder beeinflusst wird, erfolgt die Abstimmung der HDR-Belichtungen stets nach der Festlegung des Rauheitsbildes. 
 Die Abbildungen~\ref{fig:burr_baustahl},~\ref{fig:burr_edelstahl}, ~\ref{fig:roughness_baustahl} und ~\ref{fig:roughness_edelstahl} zeigen exemplarisch die finalen Handscanner Bilder, welche für die Qualitätsschätzung genutzt werden, für Edelstahl im Vergleich zu den bisherigen Bildern für die Qualitätsschätzung von Baustahl. In den Abbildungen ist jeweils die gleiche Schnittkante eines Blechteils aus den geschnittenen Experimentalplänen dargestellt mit einer Dicke von 15 mm.
@@ -115,7 +139,7 @@ public static string NameParserMaterial(string input)
 
 Die mit dem Keyence-System aufgenommene 3D-Punktwolke der Schnittkante bildet die Grundlage für die geometrische Qualitätsauswertung. In der bestehenden Auswertepipeline wird die Punktwolke zunächst segmentiert und in ein lokales Kantenkoordinatensystem überführt. Anschließend erfolgt eine Projektion aus der dreidimensionalen Repräsentation in einen zweidimensionalen Profilverlauf, sodass ein 2D-Vektor entsteht, der den Verlauf des Schneidgrats entlang der Schnittkante beschreibt. Diese Vorgehensweise wurde ursprünglich für Baustahl entwickelt und auf dessen charakteristisch eher wellige, kontinuierliche Gratmorphologie abgestimmt.
 
-Die nachfolgend beschriebenen Anpassungen betreffen ausschließlich den \textbf{Grat-/Burr}-Kanal unterteilt in der Ausreißererkennung von Messdaten und der darauffolgenden Interpolation. Für die Rauheitsanalyse werden die in der Baustahl-Pipeline etablierten Einstellungen übernommen. Aus interner Erfahrung zeigt die Rauheitsprüfung eine stabile und konsistente bewertung, sodass in diesem Kapitel bewusst auf Abbildungen als Nachweis verzichtet wird.
+Die nachfolgend beschriebenen Anpassungen betreffen ausschließlich den \textbf{Grat-/Burr}-Kanal unterteilt in der Ausreißererkennung von Messdaten und der darauffolgenden Interpolation. Für die Rauheitsanalyse werden die in der Baustahl-Pipeline etablierten Einstellungen übernommen. Aus interner Erfahrung zeigt die Rauheitsprüfung eine stabile und konsistente Bewertung.
 
 Bei Edelstahl zeigt sich eine abweichende, ausgeprägt zackige Gratstruktur mit höheren lokalen Gradienten und diskontinuierlichen Profilabschnitten. Die bislang implementierte Outlier-Korrektur ist konzipiert zur Eliminierung sporadischer Messfehler bei Baustahl. Demnach stuft diese den Gratverlauf von Edelstahl fälschlich als Ausreißer ein und glättet sie übermäßig. Dadurch werden relevante Merkmale des Edelstahlgrats unterdrückt und der resultierende Vektorverlauf in Richtung eines künstlich „glatten“ Profils verzerrt.
 
@@ -125,7 +149,7 @@ Zur materialspezifischen Anpassung werden daher zwei Kernmodule überarbeitet. D
 
 Für die Interpolation wird ein konservativer Ansatz gewählt, der Lückenschlüsse bevorzugt entlang lokal konsistenter Nachbarschaften vornimmt und globale, stark glättende Approximationen vermeidet. Damit wird erreicht, dass der rekonstruierte 2D-Vektor fehlende Messpunkte plausibel ergänzt, ohne die charakteristische Zackigkeit des Edelstahlgrats zu nivellieren.
 
-\subsection{Outlier Detection/Correction}
+\subsection{Outlier Detection/Correction des Gratverlaufs}
 \label{sec:Outlier Detection/Correction}
 
 Die Ausreißerbehandlung im \textbf{Burr}-Kanal erfolgt zweistufig. Zunächst werden potenzielle Ausreißerpunkte durch den Vergleich des gemessenen Profils mit einem lokal geglätteten Referenzsignal identifiziert. Anschließend werden die dadurch entstehenden Lücken kontrolliert und rekonstruiert. In \texttt{outlier\_correction\_burr} wird das Höhenprofil \texttt{z\_vec} mittels gleitendem Mittelwert (\texttt{np.convolve} mit der Fensterlänge \texttt{window}) geglättet. Die absolute Abweichung \(\Delta=\lvert z-\overline{z}_{\text{MA}}\rvert\) wird punktweise gegen den Schwellwert \texttt{threshold} geprüft. Punkte oberhalb des Schwellwertes bilden die Ausreißermaske. Ist der Anteil markierter Punkte größer als \texttt{max\_nan\_values\_perc}, wird der Vorgang verworfen (\texttt{None}). Andernfalls werden die Ausreißer zu \texttt{NaN} gesetzt und mit \texttt{smooth\_nan\_values} rekonstruiert, um numerisches Rauschen zu reduzieren, ohne relevante Strukturen zu nivellieren.
@@ -193,11 +217,41 @@ burr_outlier_threshold : 0.03  # Threshold for Moving Average Difference Filter 
 burr_outlier_window    : 10    # Window for Moving Average Difference Filter [samples]
 \end{lstlisting}
 
-\subsection{Interpolation}
+\subsection{Interpolation des Gratverlaufs}
 \label{sec:Interpolation}
 
-Die Interpolation dient der Rekonstruktion fehlender Messwerte (\texttt{NaN}), die durch Ausreißererkennung oder unvollständige Erfassung entstehen. Ziel ist eine Wiederherstellung des Gratverlaufs, demnach werden nur kurze, lokal begrenzte Lücken gefüllt und größere Ausfälle bleiben aus. Der Rekonstruktionsschritt nutzt ausschließlich lokale Nachbarschaftsinformationen, um die charakteristische Profil- bzw.\ Kantenstruktur zu erhalten und unnötige Verfälschungen zu vermeiden.
-
-In der Interpolations-Pipeline wurden keine Konstanten geändert. Insbesondere bleiben Grenzwerte für die maximale Lückenlänge sowie Glättungs- und Fensterparameter gegenüber der Baustahlkonfiguration unverändert. Der zugehörige Quellcode ist im Anhang dokumentiert.
+Die Interpolation rekonstruiert fehlende Messwerte (\texttt{NaN}), die durch Ausreißerkennzeichnung oder unvollständige Erfassung entstehen. Ziel ist die Wiederherstellung eines plausiblen Gratverlaufs, daher werden nur kurze, lokal begrenzte Lücken gefüllt und größere Ausfälle bleiben markiert. Durch die angepasste Ausreißererkennung werden weniger echte Messpunkte fälschlich als Ausreißer markiert, sodass deutlich weniger Lücken entstehen und nicht mehr unnötig interpoliert wird. Am Interpolationsskript wurden keine Änderungen vorgenommen. Alle Konstanten bleiben unverändert, insbesondere die maximale Lückenlänge sowie Glättungs- und Fensterparameter. Der zugehörige Quellcode ist im Anhang dokumentiert.
+Die Validierung desssen erfolgt im folgendem Kapitel ~\ref{sec:validierung-burr}.
 
 \section {Validierung der Messoptimierungen}
+\label{sec:validierung-burr}
+
+Im folgendem Kapitel werden die verbesserten Messmethoden für die Grat- und Rauheitsanalyse validiert, um bestenfalls die Optimierung für Datenerfassung zu nutzen, so dass das KI-Modell neu trainiert werden kann. 
+
+\subsection{Validierung der verbesserten Ausreißererkennung im Burr-Kanal}
+
+In diesem Abschnitt werden die edelstahl-optimierten Einstellungen der Ausreißererkennung validiert. Verglichen wird die frühere Baustahl-Parametrierung mit der angepassten Erkennung für Edelstahl.
+
+Die Abbildung~\ref{fig:burr-compare} den Vergleich der verbsserten und der unverbeserten Ausreißererkennung. Hierfür wurden jeweils das gleiche Sektioonsbild des gleichen Edelstahlblechs. Die rote Linie ist der abgeleitete Burr-Vektor. Auf dem linken Schaubild ist die unverbesserte Ausreißererkennung erkennbar, welche für Baustahl werdet wird und rechts die verbesserte Ausreißererkennung. Demnach ist der verbesserte Verlauf durchgängig, es entstehen weniger fehlerhafte Lücken und die interpolierten Abschnitte sind plausibler. Quantitativ sinkt der Burr-Wert der gezeigten Sektion von \(681{,}99\,\mu\mathrm{m}\) (Baustahl-Parameter) auf \(650{,}88\,\mu\mathrm{m}\) (Edelstahl-Parameter), jedoch erfolgt die einschätzende Bewertung visuell. Es wird geprüft, wie gut die rote Linie dem sichtbaren Gratverlauf folgt.  
+\begin{figure}[htbp]
+  \centering
+  \begin{minipage}[t]{0.48\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{outlier_detection_baustahl.png}
+    \vspace{0.3em}
+    {\small\emph{Unverbesserte Ausreißererkennung: sichtbare Lücken und Fehlverfolgungen.}}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.48\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{outlier_detection_edelstahl.png}
+    \vspace{0.3em}
+    {\small\emph{Verbesserte Ausreißererkennung: durchgängiger Verlauf, plausiblere Interpolation.}}
+  \end{minipage}
+  \caption[Ausreißererkennung im Burr-Kanal]{Links ist die unverbesserte Ausreißererkennung erkennbar, welche für Baustahl werdet wird und rechts die verbesserte Ausreißererkennung. Die rote Kurve ist der abgeleitete Burr-Vektor.}
+  \label{fig:burr-compare}
+\end{figure}
+
+Demnach ist die verbesserte Ausreißererkennung für Edelstahl validiert. Die Rauheitsanalyse wurde nicht verändert, da diese in internen Erfahrungen eine stabile und konsistente Bewertung zeigt.
+
+\subsection{Validierung der bestehenden Rauheitsanalyse an den neuen Edelsdtahldaten}
+In diesem Abschnitt wird die Rauheitsanalyse validiert. Die Berechnungsmethode bleibt unverändert. Die Belichtung des Handscanners wurde so angepasst, dass die Struktur der Schnittfläche zuverlässig erfasst wird (siehe Abschnitt~\ref{chap:handscanner-setup}). Zur Prüfung der Eignung wurde die bestehende Rauheitsberechnung auf die neuen Bilder von Edelstahlblechen angewendet und auf mögliche Ausreißer in den resultierenden Rauheitswerten untersucht. Es traten keine systematischen Ausreißer auf, daher wird die Berechnung vorerst unverändert weitergeführt. Anpassungen werden erst nach weiterführenden Modelltrainings geprüft.

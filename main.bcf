@@ -2376,6 +2376,10 @@
     <bcf:citekey order="2" intorder="1">ISO9013-2017</bcf:citekey>
     <bcf:citekey order="3" intorder="1">MitutoyoQuickGuide</bcf:citekey>
     <bcf:citekey order="4" intorder="1">KeyenceISO4287</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">FischerPochwyt_NeuronaleNetze_2017</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">FischerPochwyt_NeuronaleNetze_2017</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">FischerPochwyt_NeuronaleNetze_2017</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">ZahnerStainlessReflect</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
