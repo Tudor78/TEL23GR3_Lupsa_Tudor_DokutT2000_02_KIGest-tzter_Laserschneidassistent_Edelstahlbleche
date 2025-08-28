@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1756366716.63986 "main.bcf" "main.bbl" "main" 1756366826.23002 0
+["biber main"] 1756366716.63986 "main.bcf" "main.bbl" "main" 1756370125.6593 0
   "includes/literatur-datenbank.bib" 1756366716 1455 daa8d441af43737eeedbfbb9b3da2e1b ""
-  "main.bcf" 1756366825 108760 221be445617bb955896509108642d49c "pdflatex"
+  "main.bcf" 1756370125 108760 221be445617bb955896509108642d49c "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1756366823.61563 "c:/Users/tudor/Uni/TEL23GR3_Lupsa_Tudor_DokutT2000_02_KIGest-tzter_Laserschneidassistent_Edelstahlbleche/main.tex" "main.pdf" "main" 1756366826.2307 0
+["pdflatex"] 1756370123.0546 "c:/Users/tudor/Uni/TEL23GR3_Lupsa_Tudor_DokutT2000_02_KIGest-tzter_Laserschneidassistent_Edelstahlbleche/main.tex" "main.pdf" "main" 1756370125.66002 0
   "C:/Users/tudor/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1756191933 81107 70b8516c68c2e617189c5e44bfd16b96 ""
   "C:/Users/tudor/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx0900.pk" 1753948009 22504 11e87f4d37d3abf98f7e9d1c9e47e5b6 ""
   "C:/Users/tudor/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1095.pk" 1753948013 28976 9ac8970520adbd1e078124e61889a476 ""
@@ -220,21 +220,21 @@
   "includes/config.tex" 1753949356 3040 6d94d2d154759eb4089b3f3ebcc5c372 ""
   "includes/ehrenwoertliche_erklaerung.tex" 1756199233 472 a7aa4160f0a4e5bb05de992b890ab354 ""
   "includes/einleitung.tex" 1756362980 3736 866bddf86bc5a2add07a91870fdf45e4 ""
-  "includes/grundlagen.tex" 1756366820 5870 460d13cce88a9a26957a55fcad3d4242 ""
+  "includes/grundlagen.tex" 1756370119 6430 94a49e82d9334b3dbab09e0a8f1c1832 ""
   "includes/kurzreferat.tex" 1756199233 41 57e38bf3cbcb523426675e8279c7a646 ""
   "includes/messmethodik_datenerfassung_messzelle.tex" 1756362980 19211 1dcd7fa7100369817a45a59019a7b2a3 ""
   "includes/reflexion_ausblick.tex" 1756199233 77 e7cc0cc7dc051149fff4c8c7c54ab870 ""
   "includes/sperrvermerk.tex" 1756199233 510 c1b6bd9d62da605904d75d62e0fe253b ""
-  "includes/stand_der_technik.tex" 1756362980 129 d8b11bf8796003cde4f3cb70e9c42247 ""
+  "includes/stand_der_technik.tex" 1756369547 162 eac99c14a739eb7ea4e1ccba39e08ec3 ""
   "includes/versuchsplanung_zur_identifikation_von_schnittabrissgrenzen.tex" 1756362980 4742 f8a195b7a5ffd2230f590989a8d97a09 ""
-  "main.aux" 1756366825 21933 4f443bbbdff9a3d3d21e098892ee2734 "pdflatex"
+  "main.aux" 1756370125 22100 b0fdf52ea5a0302d2bd3e119d38d7fc4 "pdflatex"
   "main.bbl" 1756366718 3955 5fad9f00ce19f8e1442110b0597dc616 "biber main"
-  "main.lof" 1756366825 1048 f7f332a634798ed4c370c1fb3efee265 "pdflatex"
-  "main.lol" 1756366825 1200 338fc5ca6b447ce77f148c4e9438b633 "pdflatex"
-  "main.lot" 1756366825 134 e802040f7a26e8c8e5fb650b1cd45780 "pdflatex"
-  "main.run.xml" 1756366825 2365 4a9c51e06dbd9008bb70a73b1290a8b1 "pdflatex"
+  "main.lof" 1756370125 1048 f7f332a634798ed4c370c1fb3efee265 "pdflatex"
+  "main.lol" 1756370125 1200 338fc5ca6b447ce77f148c4e9438b633 "pdflatex"
+  "main.lot" 1756370125 134 e802040f7a26e8c8e5fb650b1cd45780 "pdflatex"
+  "main.run.xml" 1756370125 2365 4a9c51e06dbd9008bb70a73b1290a8b1 "pdflatex"
   "main.tex" 1756362980 2802 4520f80831960b01ff3c48afbf893260 ""
-  "main.toc" 1756366825 2395 fd1e565b6a53ebc9d960c3cb2dfec965 "pdflatex"
+  "main.toc" 1756370125 2395 07478f695b6431cec6ba084f85af83fe "pdflatex"
   "template/_dhbw_biblatex-config.tex" 1753947405 5863 6458ff6d1ddde7fe67c7cfcb4b877bb6 ""
   "template/_dhbw_deckblatt.tex" 1754316275 1385 98411b3ecc4ac459609ae3fb7868b9e9 ""
   "template/_dhbw_kopfzeilen.tex" 1753947405 3242 2adf395a861555cad5f7183940838bb6 ""

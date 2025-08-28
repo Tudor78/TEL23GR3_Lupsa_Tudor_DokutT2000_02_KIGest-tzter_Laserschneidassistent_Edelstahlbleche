@@ -12,7 +12,7 @@
 \contentsline {section}{\numberline {1.2}Vorgehensweise}{1}{section.12}%
 \contentsline {chapter}{\numberline {2}Grundlagen}{3}{chapter.13}%
 \contentsline {section}{\numberline {2.1}Laserlichtschneiden}{3}{section.14}%
-\contentsline {section}{\numberline {2.2}Grat und Rauheit eines Blechteils}{3}{section.15}%
+\contentsline {section}{\numberline {2.2}Grat und Rauheit eines Blechteils}{4}{section.15}%
 \contentsline {section}{\numberline {2.3}CNNs}{5}{section.18}%
 \contentsline {chapter}{\numberline {3}Stand der Technik}{6}{chapter.19}%
 \contentsline {section}{\numberline {3.1}KI-gestütesztes Laserschneiden - Cutting Assistent}{6}{section.20}%

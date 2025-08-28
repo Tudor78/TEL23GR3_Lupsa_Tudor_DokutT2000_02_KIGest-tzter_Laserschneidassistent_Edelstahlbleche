@@ -1,4 +1,7 @@
 \chapter{Grundlagen}
+
+Für die vorligendee Arbeit sind Kenntnisse in den Bereichen Laserlichtschneiden, Blechverarbeitung, Bildverarbeitung und Convolutional Neuroal Networks (CNNs) erforderlich. In diesem Kapitel werden die wichtigsten Grundlagen erläutert.
+
 \section{Laserlichtschneiden}
 
 Beim Laserlichtschneiden wird ein fokussierter Laserstrahl auf die Werkstückoberfläche gerichtet. Das Material schmilzt lokal auf und wird mit einem zugeführten Gas aus dem Schnittspalt ausgeblasen. So entsteht eine schmale, definierte Trennfuge. Die grundlegenden Begriffe und Kenngrößen (z.\,B.\ Strahlleistung, Strahlqualität, Fokuslage) sind in \parencite{ISO11145-2018} beschrieben.
@@ -12,7 +15,9 @@ Für Edelstahl gelten gegenüber Baustahl angepasste Einstellungen. Gründe sind
 \section{Grat und Rauheit eines Blechteils}
 \label{sec:grat-rauheit}
 
-Grat und Rauheit beschreiben die Qualität der Schnittkante. Der Grat ist ein aufgeworfener Materialrand an der Unterkante. Er entsteht durch unvollständigen Schmelzaustrag oder durch Anhaften von Schmelze im Schnittspalt. Die Rauheit beschreibt die feinen Höhenabweichungen der Schnittfläche entlang eines Profils \(Z(x)\).
+Für das Verständis der vorliegenden Arbeit sind Grat und Rauheit wichtige Kenngrößen der Schnittqualität. Dies wird in diesem Abschnitt erläutert.
+
+Grat und Rauheit beschreiben die Qualität der Schnittkante. Der Grat ist ein aufgeworfener Materialrand an der Unterkante und entsteht durch unvollständigen Schmelzaustrag oder Anhaften von Schmelze im Schnittspalt. Die Rauheit beschreibt die feinen Höhenabweichungen der Schnittfläche entlang eines Profils \(Z(x)\).
 
 Die in Tabelle~\ref{tab:symbole-rauheit-grat} zusammengefassten Formelzeichen werden in diesem Dokument verwendet.
 \begin{table}[htbp]
@@ -22,7 +27,7 @@ Die in Tabelle~\ref{tab:symbole-rauheit-grat} zusammengefassten Formelzeichen we
   \label{tab:symbole-rauheit-grat}
   \begin{tabular}{@{}lll@{}}
     \toprule
-    Zeichen & Bedeutung & Typische Einheit \\
+    Zeichen & Bedeutung & Einheit \\
     \midrule
     $Z(x)$      & gefiltertes Profil entlang der Auswertelänge $L$ & $\mu$m \\
     $Z_i$       & diskreter Profilwert an Position $x_i$            & $\mu$m \\
@@ -37,7 +42,7 @@ Die in Tabelle~\ref{tab:symbole-rauheit-grat} zusammengefassten Formelzeichen we
   \end{tabular}
 \end{table}
 
-Die Berechnung der Kenngrößen folgt den veröffentlichten Rechenregeln. Der arithmetische Mittenrauwert \(R_a\) ist das Mittel der Beträge der Profilabweichung über die Auswertelänge \(L\) \parencite{MitutoyoQuickGuide}:
+Die Berechnung der Kenngrößen folgt den nachfolgenden Rechenregeln. Der arithmetische Mittenrauwert \(R_a\) ist das Mittel der Beträge der Profilabweichung über die Auswertelänge \(L\) \parencite{MitutoyoQuickGuide}:
 \[
 R_a=\frac{1}{L}\int_{0}^{L}\lvert Z(x)\rvert\,\mathrm{d}x
 \]
@@ -51,10 +56,10 @@ R_z=\frac{1}{5}\sum_{j=1}^{5}\bigl(P^{\max}_{j}-P^{\min}_{j}\bigr).
 \]
 
 Die Grathöhe \(h_b\) wird als maximale positive Auslenkung des Profils im Randbereich der unteren Schnittkante bestimmt. Grundlage ist dasselbe Profil \(Z(x)\) oder ein aus einer Punktwolke abgeleitetes Profil senkrecht zur Kante. Neben \(h_b\) können Breite und Form des Grates angegeben werden.
+Die Profilwerte \(Z_i\) stammen aus einer 3D-Punktwolke oder aus einer bildbasierten Profilerfassung. Aus diesen Werten werden \(R_a\) und \(R_z\) berechnet. Die Grathöhe \(h_b\) wird im Kantenbereich aus demselben Profil ermittelt. Einen Überblick zum verwendeten 3D-Messsystem gibt Abschnitt~\ref{sec:3d-messsystem-keyence}.
 
-Die Profilwerte \(Z_i\) stammen aus einer 3D-Punktwolke oder aus einer bildbasierten Profilerfassung. Aus diesen Werten werden \(R_a\) und \(R_z\) berechnet. Die Grathöhe \(h_b\) wird im Kantenbereich aus demselben Profil ermittelt.
-
-In Abbildung~\ref{fig:roughness-profile} ist das Prinzip der Rauheitsbestimmung schematisch dargestellt. Die rote Linie markiert den Wert von \(R_a\). \(Z_i\) sind die diskreten Profilwerte. \(X_{s,j}\) kennzeichnet die Teilstrecken für die Berechnung von \(R_z\).
+Die Abbildung~\ref{fig:roughness-profile} zeigt das gefilterte Rauheitsprofil \(Z(x)\) über der Messstrecke \(X\).
+Die rote Linie kennzeichnet \(R_a\), \(Z_i\) sind die diskreten Profilwerte und \(X_{s,j}\) die Teilstrecken für \(R_z\). Die Grathöhe \(h_b\) wird an der unteren Schnittkante als größte positive Auslenkung im Kantenfenster bestimmt.
 
 \begin{figure}[htbp]
   \centering
@@ -62,7 +67,6 @@ In Abbildung~\ref{fig:roughness-profile} ist das Prinzip der Rauheitsbestimmung 
   \caption[Schema zur Bestimmung der Rauheit]{Schema zur Bestimmung der Rauheit mit Profilwerten \(Z_i\), Teilstrecken \(X_{s,j}\) und markiertem \(R_a\).}
   \label{fig:roughness-profile}
 \end{figure}
-
 
 
 \section{CNNs}
