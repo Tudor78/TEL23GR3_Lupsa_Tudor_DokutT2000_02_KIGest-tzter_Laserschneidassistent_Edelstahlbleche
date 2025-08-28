@@ -10,36 +10,59 @@ Die wichtigsten Einstellgrößen dieser sind die Laserleistung, Schnittgeschwind
 Für Edelstahl gelten gegenüber Baustahl angepasste Einstellungen. Gründe sind unter anderem eine höhere Reflexion und eine geringere Wärmeabfuhr. In der Praxis bedeutet das, dass die Leistung und die Fokuslage sorgfältig abgestimmt werden müssen. Die Geschwindigkeit muss demnach passend gewählt werden. Als Prozessgas wird meistens Stickstoff eingesetzt, um eine helle Kante und geringen Grat zu erreichen.
 
 \section{Grat und Rauheit eines Blechteils}
-
 \label{sec:grat-rauheit}
 
-Grat und Rauheit sind zentrale Merkmale der Schnittkante. Der Grat entsteht als aufgeworfener Materialüberschuss an der Unterkante. Er entsteht durch unvollständigen Schmelzaustrag oder durch Wiederanbacken von Schmelze im Schnittspalt. Die Rauheit beschreibt die feinen Höhenabweichungen der Schnittfläche entlang eines Profils. Für die Begriffe und Messregeln gelten die Definitionen in \parencite{ISO11145-2018} und die Qualitätsklassifikation thermischer Schnitte in \parencite{ISO9013-2017}. Für die geometrischen Rauheitskenngrößen wird nach ISO 4287 gemessen und ausgewertet.
+Grat und Rauheit beschreiben die Qualität der Schnittkante. Der Grat ist ein aufgeworfener Materialrand an der Unterkante. Er entsteht durch unvollständigen Schmelzaustrag oder durch Anhaften von Schmelze im Schnittspalt. Die Rauheit beschreibt die feinen Höhenabweichungen der Schnittfläche entlang eines Profils \(Z(x)\).
 
-\textbf{Rauheit.} Ein Rauheitsprofil \(z(x)\) entsteht nach Abtrennung von Form und Welligkeit über die festgelegte Grenzfrequenz. Der arithmetische Mittenrauwert \(R_a\) ist das Mittel der Beträge der Profilabweichung über die Auswertelänge \(L\)
+Die in Tabelle~\ref{tab:symbole-rauheit-grat} zusammengefassten Formelzeichen werden in diesem Dokument verwendet.
+\begin{table}[htbp]
+  \centering
+  \ra{1.2}
+  \caption{Formelzeichen für Rauheit und Grat}
+  \label{tab:symbole-rauheit-grat}
+  \begin{tabular}{@{}lll@{}}
+    \toprule
+    Zeichen & Bedeutung & Typische Einheit \\
+    \midrule
+    $Z(x)$      & gefiltertes Profil entlang der Auswertelänge $L$ & $\mu$m \\
+    $Z_i$       & diskreter Profilwert an Position $x_i$            & $\mu$m \\
+    $L$         & Auswertelänge                                      & mm \\
+    $n$         & Anzahl der Stützstellen in $L$                     & -- \\
+    $X_{s,j}$   & $j$-te Teilstrecke innerhalb von $L$               & mm \\
+    $R_a$       & arithmetischer Mittenrauwert                       & $\mu$m \\
+    $R_z$       & mittlere Rautiefe aus fünf Teilstrecken            & $\mu$m \\
+    $P^{\max}_{j}$, $P^{\min}_{j}$ & höchster bzw.\ tiefster Punkt in $X_{s,j}$ & $\mu$m \\
+    $h_b$       & Grathöhe an der unteren Schnittkante               & $\mu$m \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Die Berechnung der Kenngrößen folgt den veröffentlichten Rechenregeln. Der arithmetische Mittenrauwert \(R_a\) ist das Mittel der Beträge der Profilabweichung über die Auswertelänge \(L\) \parencite{MitutoyoQuickGuide}:
 \[
-R_a=\frac{1}{L}\int_{0}^{L}\lvert z(x)\rvert\,\mathrm{d}x
+R_a=\frac{1}{L}\int_{0}^{L}\lvert Z(x)\rvert\,\mathrm{d}x
 \]
-und in diskreter Form für \(n\) Stützstellen
+und in diskreter Form mit \(n\) Stützstellen \(Z_i\):
 \[
-R_a=\frac{1}{n}\sum_{i=1}^{n}\lvert z_i\rvert\;.
+R_a=\frac{1}{n}\sum_{i=1}^{n}\lvert Z_i\rvert.
 \]
-Häufig wird zusätzlich die mittlere Rautiefe \(R_z\) angegeben. Dafür wird die Auswertelänge in fünf Teilstücke zerlegt. In jedem Teilstück wird die Differenz zwischen höchstem Profilpunkt und tiefstem Profilpunkt gebildet. \(R_z\) ist das arithmetische Mittel dieser fünf Werte. \parencite{ISO9013-2017}
+Die mittlere Rautiefe \(R_z\) wird über fünf Teilstrecken \(X_{s,1}\) bis \(X_{s,5}\) bestimmt \parencite{KeyenceISO4287}. In jeder Teilstrecke wird die Differenz zwischen höchstem und tiefstem Profilpunkt gebildet. \(R_z\) ist das arithmetische Mittel dieser fünf Differenzen:
+\[
+R_z=\frac{1}{5}\sum_{j=1}^{5}\bigl(P^{\max}_{j}-P^{\min}_{j}\bigr).
+\]
 
-Die Grathöhe \(h_b\) wird als maximale positive Auslenkung des Profils im Bereich der unteren Schnittkante gemessen. Grundlage ist ein Profil senkrecht zur Schnittkante oder ein entlang der Kante geführtes Profil, das aus einer Punktwolke oder einem Tastschnitt abgeleitet wird. Neben der Höhe können Breite und Form des Grates beschrieben werden. Für Abnahme und Zeichnungseintrag wird die Zuordnung zu Qualitätsklassen nach \parencite{ISO9013-2017} verwendet.
+Die Grathöhe \(h_b\) wird als maximale positive Auslenkung des Profils im Randbereich der unteren Schnittkante bestimmt. Grundlage ist dasselbe Profil \(Z(x)\) oder ein aus einer Punktwolke abgeleitetes Profil senkrecht zur Kante. Neben \(h_b\) können Breite und Form des Grates angegeben werden.
 
-Edelstahl besitzt eine geringere Wärmeleitfähigkeit und eine höhere Reflexion als Baustahl. Dadurch konzentriert sich die Eingangsenergie stärker in der Schnittzone. Die Schmelze bleibt zäher und fließt schwerer ab. Das begünstigt eine zackige Gratmorphologie und erhöht die Streuung der lokalen Rauheit. Beim Schneiden von Baustahl ist der Grat oft gleichmäßiger. Der Einsatz von Stickstoff unterstützt helle Kanten ohne Oxid und erleichtert die Nachbearbeitung. Sauerstoff kann höhere Vorschübe ermöglichen, führt aber zu einer dunklen Oxidschicht, die optisch auffällt und oft entfernt werden muss. Unabhängig vom Werkstoff wirken Leistung, Fokuslage, Schnittgeschwindigkeit, Gasdruck und Düsenabstand zusammen. Zu geringe Leistung oder zu hohe Geschwindigkeit erhöhen die Wahrscheinlichkeit von Grat und unruhigen Schnittflächen. Ein unpassender Fokus oder ein zu niedriger Gasdruck verschlechtert den Schmelzaustrag und erhöht die Rauheit.
+Die Profilwerte \(Z_i\) stammen aus einer 3D-Punktwolke oder aus einer bildbasierten Profilerfassung. Aus diesen Werten werden \(R_a\) und \(R_z\) berechnet. Die Grathöhe \(h_b\) wird im Kantenbereich aus demselben Profil ermittelt.
 
-In der Praxis wird das Profil aus einer 3D-Punktwolke oder aus Bilddaten erzeugt. Aus diesem Profil werden \(R_a\) und \(R_z\) berechnet. Die Grathöhe wird aus demselben Profil im Randbereich bestimmt. Eine klare Kennzeichnung der Messstellen und der Parameter sorgt dafür, dass Werte zwischen Werkstücken und Dicken vergleichbar bleiben.
-
-In Abbildung~\ref{fig:roughness-profile} ist das Prinzip der Rauheitsbestimmung schematisch dargestellt. Die rote Linie zeigt die Bezugslinie. \(z_i\) sind die Profilwerte und \(X_{s}\) markiert eine Teilstrecke für die Auswertung von Kenngrößen wie \(R_z\).
+In Abbildung~\ref{fig:roughness-profile} ist das Prinzip der Rauheitsbestimmung schematisch dargestellt. Die rote Linie markiert den Wert von \(R_a\). \(Z_i\) sind die diskreten Profilwerte. \(X_{s,j}\) kennzeichnet die Teilstrecken für die Berechnung von \(R_z\).
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=\linewidth]{burr_roughness_schaubild.png}%
-  \caption[Schema zur Bestimmung der Rauheit]{Schema zur Bestimmung der Rauheit}
-\url{https://www.timesaversint.com/app/uploads/2021/04/all-you-need-to-know-about-surface-roughness-ra-8-2048x492.png}
+  \includegraphics[width=\linewidth]{burr_roughness_schaubild.png}
+  \caption[Schema zur Bestimmung der Rauheit]{Schema zur Bestimmung der Rauheit mit Profilwerten \(Z_i\), Teilstrecken \(X_{s,j}\) und markiertem \(R_a\).}
   \label{fig:roughness-profile}
 \end{figure}
+
 
 
 \section{CNNs}

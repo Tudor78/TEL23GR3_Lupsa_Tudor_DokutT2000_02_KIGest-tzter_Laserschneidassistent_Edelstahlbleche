@@ -42,6 +42,51 @@
       \verb https://www.iso.org/standard/72944.html
       \endverb
     \endentry
+    \entry{MitutoyoQuickGuide}{manual}{}{}
+      \list{organization}{1}{%
+        {Mitutoyo Corporation}%
+      }
+      \field{sortinit}{Q}
+      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{note}{Enthält Formeln und Definitionen zu Ra und Rz}
+      \field{title}{Quick Guide to Surface Roughness Measurement}
+      \field{urlday}{28}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.mitutoyo.com/webfoo/wp-content/uploads/1984_Surf_Roughness_PG.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.mitutoyo.com/webfoo/wp-content/uploads/1984_Surf_Roughness_PG.pdf
+      \endverb
+    \endentry
+    \entry{KeyenceISO4287}{online}{}{}
+      \list{organization}{1}{%
+        {KEYENCE}%
+      }
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{note}{Erklärt Ra und Rz, Sampling Length \(X_s\) und Auswertelänge}
+      \field{title}{Surface Roughness Parameters — ISO 4287 overview}
+      \field{urlday}{28}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.keyence.com/ss/products/microscope/roughness/line/parameters.jsp
+      \endverb
+      \verb{url}
+      \verb https://www.keyence.com/ss/products/microscope/roughness/line/parameters.jsp
+      \endverb
+    \endentry
     \entry{ISO9013-2017}{standard}{}{}
       \list{organization}{1}{%
         {International Organization for Standardization}%
