@@ -248,6 +248,52 @@
       \verb https://www.mitutoyo.com/webfoo/wp-content/uploads/1984_Surf_Roughness_PG.pdf
       \endverb
     \endentry
+    \entry{Schindhelm2014}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ceae6cef66b678f7e6a8235c01049915}{%
+           family={Schindhelm},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {München}%
+      }
+      \list{publisher}{1}{%
+        {Herbert Utz Verlag}%
+      }
+      \strng{namehash}{ceae6cef66b678f7e6a8235c01049915}
+      \strng{fullhash}{ceae6cef66b678f7e6a8235c01049915}
+      \strng{fullhashraw}{ceae6cef66b678f7e6a8235c01049915}
+      \strng{bibnamehash}{ceae6cef66b678f7e6a8235c01049915}
+      \strng{authorbibnamehash}{ceae6cef66b678f7e6a8235c01049915}
+      \strng{authornamehash}{ceae6cef66b678f7e6a8235c01049915}
+      \strng{authorfullhash}{ceae6cef66b678f7e6a8235c01049915}
+      \strng{authorfullhashraw}{ceae6cef66b678f7e6a8235c01049915}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-8316-4345-5, 978-3-8316-7045-1}
+      \field{langid}{german}
+      \field{series}{Laser in der Materialbearbeitung: Forschungsberichte des IFSW}
+      \field{title}{In-Prozess Qualitätssicherung für das Laserstrahlschneiden von Metallen}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://books.google.com/books?id=Kbi1AwAAQBAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.com/books?id=Kbi1AwAAQBAJ
+      \endverb
+    \endentry
     \entry{Timesavers_Rauheit_Ra}{online}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=25aa7b6b95356f5fa16be6224e89a215}{%

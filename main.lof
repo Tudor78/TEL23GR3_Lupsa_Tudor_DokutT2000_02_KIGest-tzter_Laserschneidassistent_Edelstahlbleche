@@ -1,13 +1,17 @@
 \babel@toc {ngerman}{}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Schema zur Bestimmung der Rauheit}}{5}{figure.17}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Schematischer Aufbau eines CNN}}{6}{figure.19}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Handscanner (1), ID-Lesegerät (2), Keyence 3D-Messsystem (3) in der Messzelle}}{11}{figure.25}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Smartphone (4) und Industriekamera (5) in der Messzelle}}{12}{figure.26}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Vergleich zwischen vorhergesagten und tatsächlichen Werten für den Grat (Burr).}}{12}{figure.27}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Vergleich zwischen vorhergesagten und tatsächlichen Werten für die Rauheit (Roughness).}}{12}{figure.28}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Handcanner Bild für die Gratschätzung (Baustahl)}}{14}{figure.30}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Handcanner Bild für die Gratschätzung (Edelstahl)}}{14}{figure.31}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Handscnanner Bild für die Rauheitsschätzung (Baustahl)}}{14}{figure.32}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Handscanner Bild für die Rauheitsschätzung (Edelstahl)}}{14}{figure.33}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Beispiel-Proben-ID eines Blechstücks aus den Experimentalplänen}}{15}{figure.34}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Ausreißererkennung im Burr-Kanal}}{20}{figure.120}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Schema zur Bestimmung der Rauheit}}{5}{figure.16}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Schematischer Aufbau eines CNN}}{6}{figure.18}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Beispiele zur Plausibilitätsprüfung durch \enquote {Iron-hunter}: links eine gültige Aufnahme der Schnittkante, rechts eine Fehlaufnahme mit verdeckender Hand, die verworfen wird.}}{7}{figure.21}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Prozesskette des Cutting Assistant.}}{8}{figure.22}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Lasertriangulation zur Profilaufnahme.}}{8}{figure.24}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Messaufbau und Beispielpunktwolke der Schnittkante für den Gratverlauf.}}{9}{figure.25}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Handscanner (1), ID-Lesegerät (2), Keyence 3D-Messsystem (3) in der Messzelle}}{13}{figure.28}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Smartphone (4) und Industriekamera (5) in der Messzelle}}{14}{figure.29}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Vergleich zwischen vorhergesagten und tatsächlichen Werten für den Grat (Burr).}}{14}{figure.30}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Vergleich zwischen vorhergesagten und tatsächlichen Werten für die Rauheit (Roughness).}}{14}{figure.31}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Handcanner Bild für die Gratschätzung (Baustahl)}}{16}{figure.33}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Handcanner Bild für die Gratschätzung (Edelstahl)}}{16}{figure.34}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Handscnanner Bild für die Rauheitsschätzung (Baustahl)}}{16}{figure.35}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Handscanner Bild für die Rauheitsschätzung (Edelstahl)}}{16}{figure.36}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Beispiel-Proben-ID eines Blechstücks aus den Experimentalplänen}}{17}{figure.37}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Ausreißererkennung im Burr-Kanal}}{22}{figure.123}%
