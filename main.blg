@@ -1,17 +1,17 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'main.blg'
-[95] biber-MSWIN64:342> INFO - === 
-[130] Biber.pm:421> INFO - Reading 'main.bcf'
-[221] Biber.pm:1002> INFO - Found 8 citekeys in bib section 0
-[233] Biber.pm:4487> INFO - Processing section 0
+[92] biber-MSWIN64:342> INFO - === 
+[126] Biber.pm:421> INFO - Reading 'main.bcf'
+[218] Biber.pm:1002> INFO - Found 8 citekeys in bib section 0
+[230] Biber.pm:4487> INFO - Processing section 0
 [242] Biber.pm:4678> INFO - Looking for bibtex file 'includes/literatur-datenbank.bib' for section 0
-[292] bibtex.pm:1713> INFO - LaTeX decoding ...
-[305] bibtex.pm:1519> INFO - Found BibTeX data source 'includes/literatur-datenbank.bib'
-[419] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[419] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[419] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
-[419] Biber.pm:4313> INFO - No sort tailoring available for locale 'de-DE'
-[429] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[433] bbl.pm:779> INFO - Output to main.bbl
-[434] Biber.pm:132> WARN - ISBN '978-3-8316-4345-5, 978-3-8316-7045-1' in entry 'Schindhelm2014' is invalid - run biber with '--validate_datamodel' for details.
-[434] Biber.pm:134> INFO - WARNINGS: 1
+[296] bibtex.pm:1713> INFO - LaTeX decoding ...
+[308] bibtex.pm:1519> INFO - Found BibTeX data source 'includes/literatur-datenbank.bib'
+[395] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[396] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[396] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
+[396] Biber.pm:4313> INFO - No sort tailoring available for locale 'de-DE'
+[407] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[410] bbl.pm:779> INFO - Output to main.bbl
+[411] Biber.pm:132> WARN - ISBN '978-3-8316-4345-5, 978-3-8316-7045-1' in entry 'Schindhelm2014' is invalid - run biber with '--validate_datamodel' for details.
+[411] Biber.pm:134> INFO - WARNINGS: 1
