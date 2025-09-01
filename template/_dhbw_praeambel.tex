@@ -48,6 +48,13 @@
 \graphicspath{{img/}}
 \usepackage[onehalfspacing]{setspace}
 
+\usepackage[ruled,vlined]{algorithm2e}
+\SetKwInput{KwIn}{Input}
+\SetKwInput{KwOut}{Output}
+\SetKw{KwInit}{initialize}
+\SetKw{KwRet}{return}
+
+
 % Testtext, Akronyme
 \usepackage{blindtext}
 % \usepackage{color}  % durch xcolor ersetzt
@@ -73,18 +80,27 @@
 % Hyperlinks
 \usepackage[hypertexnames=false]{hyperref}
 
+% --- Quellcode statt Listing überall ---
+\usepackage[capitalise,nameinlink,noabbrev]{cleveref}
+
+% Bezeichnungen des listings-Pakets
+\usepackage{listings}
+\renewcommand{\lstlistingname}{Quellcode}
+\renewcommand{\lstlistlistingname}{Quellcodeverzeichnis}
+
+% Namen für \autoref (hyperref)
+\providecommand*{\listingautorefname}{Quellcode}
+\providecommand*{\lstlistingautorefname}{Quellcode}
+
+% cleveref: beide möglichen Typen abdecken
+\crefname{listing}{Quellcode}{Quellcodes}
+\Crefname{listing}{Quellcode}{Quellcodes}
+\crefname{lstlisting}{Quellcode}{Quellcodes}
+\Crefname{lstlisting}{Quellcode}{Quellcodes}
+
 % Bessere Umbrüche in \url{…}
 \usepackage{xurl}
 \urlstyle{tt}
-
-% Intelligente Referenzen (nach hyperref laden!)
-\usepackage[capitalise,nameinlink,noabbrev]{cleveref}
-% "Listing" -> "Quellcode" (auch für Verzeichnis und Verweise)
-\renewcommand{\lstlistingname}{Quellcode}
-\renewcommand{\lstlistlistingname}{Quellcodeverzeichnis}
-\providecommand*{\lstlistingautorefname}{Quellcode}
-\crefname{lstlisting}{Quellcode}{Quellcode}
-\Crefname{lstlisting}{Quellcode}{Quellcode}
 
 % Anhangszähler/Verzeichnis (wie in deiner Vorlage)
 \newcounter{anhcnt}\setcounter{anhcnt}{0}

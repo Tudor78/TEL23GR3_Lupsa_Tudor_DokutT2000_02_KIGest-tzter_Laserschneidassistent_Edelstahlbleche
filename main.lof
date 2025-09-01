@@ -5,13 +5,15 @@
 \contentsline {figure}{\numberline {4}{\ignorespaces Prozesskette des Cutting Assistant.}}{8}{figure.22}%
 \contentsline {figure}{\numberline {5}{\ignorespaces Lasertriangulation zur Profilaufnahme.}}{8}{figure.24}%
 \contentsline {figure}{\numberline {6}{\ignorespaces Messaufbau und Beispielpunktwolke der Schnittkante für den Gratverlauf.}}{9}{figure.25}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Handscanner (1), ID-Lesegerät (2), Keyence 3D-Messsystem (3) in der Messzelle}}{13}{figure.28}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Smartphone (4) und Industriekamera (5) in der Messzelle}}{14}{figure.29}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Vergleich zwischen vorhergesagten und tatsächlichen Werten für den Grat (Burr).}}{14}{figure.30}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Vergleich zwischen vorhergesagten und tatsächlichen Werten für die Rauheit (Roughness).}}{14}{figure.31}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Handcanner Bild für die Gratschätzung (Baustahl)}}{16}{figure.33}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Handcanner Bild für die Gratschätzung (Edelstahl)}}{16}{figure.34}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Handscnanner Bild für die Rauheitsschätzung (Baustahl)}}{16}{figure.35}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Handscanner Bild für die Rauheitsschätzung (Edelstahl)}}{16}{figure.36}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Beispiel-Proben-ID eines Blechstücks aus den Experimentalplänen}}{17}{figure.37}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Ausreißererkennung im Burr-Kanal}}{22}{figure.123}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Handscanner (1), ID-Lesegerät (2), Keyence 3D-Messsystem (3) in der Messzelle}}{12}{figure.29}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Smartphone (4) und Industriekamera (5) in der Messzelle}}{13}{figure.30}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Vergleich zwischen vorhergesagten und tatsächlichen Werten für den Grat (Burr).}}{14}{figure.31}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Vergleich zwischen vorhergesagten und tatsächlichen Werten für die Rauheit (Roughness).}}{14}{figure.32}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Dunkle Belichtung für die Rauheitsschätzung (i, erstes Bild links), zwei helle Belichtungen für die Gratschätzung (ii, mittlere Bilder) und das daraus generierte HDR-Bild (rechts).}}{15}{figure.34}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Handcanner Bild für die Gratschätzung (Baustahl)}}{16}{figure.35}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Handcanner Bild für die Gratschätzung (Edelstahl)}}{16}{figure.36}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Handscnanner Bild für die Rauheitsschätzung (Baustahl)}}{16}{figure.37}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Handscanner Bild für die Rauheitsschätzung (Edelstahl)}}{16}{figure.38}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Beispiel-Proben-ID eines Blechstücks aus den Experimentalplänen}}{17}{figure.39}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Beispielhafter Verlauf der Rauheitskennzahl \(R_a\) entlang einer Schnittkante im ersten Abschnitt mit der Breite 0,3 mm.}}{22}{figure.82}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Ausreißererkennung im Burr-Verlauf}}{23}{figure.85}%

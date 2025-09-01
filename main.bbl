@@ -331,6 +331,39 @@
       \verb https://www.timesaversint.com/de/Wissensdatenbank/alles-was-sie-ueber-die-rauheit-der-oberflaeche-ra-wissen-muessen/
       \endverb
     \endentry
+    \entry{TRUMPF_FusionCutting}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=82d877dbb095e93389d695af59850f48}{%
+           family={{TRUMPF SE + Co. KG}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{82d877dbb095e93389d695af59850f48}
+      \strng{fullhash}{82d877dbb095e93389d695af59850f48}
+      \strng{fullhashraw}{82d877dbb095e93389d695af59850f48}
+      \strng{bibnamehash}{82d877dbb095e93389d695af59850f48}
+      \strng{authorbibnamehash}{82d877dbb095e93389d695af59850f48}
+      \strng{authornamehash}{82d877dbb095e93389d695af59850f48}
+      \strng{authorfullhash}{82d877dbb095e93389d695af59850f48}
+      \strng{authorfullhashraw}{82d877dbb095e93389d695af59850f48}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Fusion cutting}
+      \field{urlday}{1}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.trumpf.com/en_US/solutions/applications/laser-cutting/fusion-cutting/
+      \endverb
+      \verb{url}
+      \verb https://www.trumpf.com/en_US/solutions/applications/laser-cutting/fusion-cutting/
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
