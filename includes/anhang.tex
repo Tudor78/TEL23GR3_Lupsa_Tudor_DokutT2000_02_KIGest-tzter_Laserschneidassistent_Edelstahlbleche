@@ -1,5 +1,34 @@
 \addchap{Anhang}
 
+\begin{lstlisting}[language={[Sharp]C}, caption={Werkstoffabhängiges Routing der Handscanner-Setups}, label={lst:messzellen-routing}, basicstyle=\scriptsize\ttfamily, breaklines=true, xleftmargin=0.02\textwidth, xrightmargin=0.02\textwidth, numbers=left, numberstyle=\tiny, linewidth=0.96\linewidth, frame=none]
+public static string NameParserMaterial(string input)
+{
+  if (string.IsNullOrWhiteSpace(input))
+    return "ST";                                // Fallback-Wert
+
+  // Position des ersten und zweiten Bindestrichs ermitteln
+  int firstDash = input.IndexOf('-');
+  int secondDash = firstDash >= 0
+           ? input.IndexOf('-', firstDash + 1)
+           : -1;
+
+  // Prüfen, ob ein zweiter Bindestrich und ein Zeichen dahinter existieren
+  if (secondDash < 0 || secondDash + 1 >= input.Length)
+    return "ST";                                // Fallback-Wert
+
+  char digit = input[secondDash + 1];             // Ziffer einlesen
+
+  // Zuordnung: 1 → "ST", 2 → "ST", 3 → "SS" (bei Bedarf anpassen)
+  return digit switch
+  {
+    '1' => "ST",
+    '2' => "ST",
+    '3' => "SS",
+    _ => "ST"                                   // Default
+  };
+}
+\end{lstlisting}
+
 \begin{lstlisting}[language=Python, caption={Interpolation begrenzter Lücken in 1D-Profilen}, label={lst:interp-limited-nans}]
 def interpolate_limited_nans(vector, max_gap=5):
     """

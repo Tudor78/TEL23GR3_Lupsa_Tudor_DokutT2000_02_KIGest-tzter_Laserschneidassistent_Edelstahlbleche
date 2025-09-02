@@ -294,6 +294,95 @@
       \verb https://books.google.com/books?id=Kbi1AwAAQBAJ
       \endverb
     \endentry
+    \entry{SensorInstruments_LLASLT_Manual_2023}{manual}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=698ce21ab50cbf47d976436c1ee518ed}{%
+           family={{Sensor Instruments GmbH}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{698ce21ab50cbf47d976436c1ee518ed}
+      \strng{fullhash}{698ce21ab50cbf47d976436c1ee518ed}
+      \strng{fullhashraw}{698ce21ab50cbf47d976436c1ee518ed}
+      \strng{bibnamehash}{698ce21ab50cbf47d976436c1ee518ed}
+      \strng{authorbibnamehash}{698ce21ab50cbf47d976436c1ee518ed}
+      \strng{authornamehash}{698ce21ab50cbf47d976436c1ee518ed}
+      \strng{authorfullhash}{698ce21ab50cbf47d976436c1ee518ed}
+      \strng{authorfullhashraw}{698ce21ab50cbf47d976436c1ee518ed}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{2}
+      \field{langid}{english}
+      \field{month}{8}
+      \field{subtitle}{Picture 1: Functional principle of laser triangulation}
+      \field{title}{L-LAS-LT-Scope V5.3x: PC Software Manual}
+      \field{urlday}{2}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.sensorinstruments.de/downloads/manuals/l-las-lt/Manual%20L-LAS-LT-Scope%20V5_3x%20eng.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.sensorinstruments.de/downloads/manuals/l-las-lt/Manual%20L-LAS-LT-Scope%20V5_3x%20eng.pdf
+      \endverb
+    \endentry
+    \entry{Tatzel-2021}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0a67defbf1d455a4d494c3166542a1c0}{%
+           family={Tatzel},
+           familyi={T\bibinitperiod},
+           given={Leonie\bibnamedelima Felica},
+           giveni={L\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Karlsruher Institut für Technologie (KIT)}%
+      }
+      \list{location}{1}{%
+        {Karlsruhe}%
+      }
+      \strng{namehash}{0a67defbf1d455a4d494c3166542a1c0}
+      \strng{fullhash}{0a67defbf1d455a4d494c3166542a1c0}
+      \strng{fullhashraw}{0a67defbf1d455a4d494c3166542a1c0}
+      \strng{bibnamehash}{0a67defbf1d455a4d494c3166542a1c0}
+      \strng{authorbibnamehash}{0a67defbf1d455a4d494c3166542a1c0}
+      \strng{authornamehash}{0a67defbf1d455a4d494c3166542a1c0}
+      \strng{authorfullhash}{0a67defbf1d455a4d494c3166542a1c0}
+      \strng{authorfullhashraw}{0a67defbf1d455a4d494c3166542a1c0}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-7315-1128-1}
+      \field{langid}{german}
+      \field{number}{24}
+      \field{series}{Forschungsberichte aus der Industriellen Informationstechnik / Institut für Industrielle Informationstechnik (IIIT), Karlsruher Institut für Technologie}
+      \field{title}{Verbesserungen beim Laserschneiden mit Methoden des maschinellen Lernens}
+      \field{type}{Dissertation}
+      \field{urlday}{2}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.5445/KSP/1000137690
+      \endverb
+      \verb{urlraw}
+      \verb https://publikationen.bibliothek.kit.edu/1000137690
+      \endverb
+      \verb{url}
+      \verb https://publikationen.bibliothek.kit.edu/1000137690
+      \endverb
+    \endentry
     \entry{Timesavers_Rauheit_Ra}{online}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=25aa7b6b95356f5fa16be6224e89a215}{%

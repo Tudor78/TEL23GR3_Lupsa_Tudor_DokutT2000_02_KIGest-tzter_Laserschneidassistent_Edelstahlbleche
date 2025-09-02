@@ -1,6 +1,6 @@
 \chapter{Grundlagen}
 
-Für die vorliegenden Arbeit sind Kenntnisse in den Bereichen Laserlichtschneiden, Blechverarbeitung, Bildverarbeitung und \ac{CNN} erforderlich. In diesem Kapitel werden die wichtigsten Grundlagen erläutert.
+Für die vorliegenden Arbeit sind Kenntnisse in den Bereichen Laserlichtschneiden, Blechverarbeitung, Bildverarbeitung und \ac{CNNs} erforderlich. In diesem Kapitel werden die wichtigsten Grundlagen erläutert.
 
 \section{Laserlichtschneiden}
 \label{sec:laserlichtschneiden}
@@ -72,9 +72,12 @@ Die rote Linie kennzeichnet \(R_a\), \(Z_i\) sind die diskreten Profilwerte und 
 \section{Convolutional Neural Networks (CNNs)}
 \label{sec:cnns}
 
-Das vorliegende soll ein Grundverständis zu \ac{CNNs} vermitteln, da dies die Grundlegende Architektur der neuronalen Netze ist und darauf der Cutting Assistant aufbaut (~\ref{sec:cutting-assistent}).
+Das vorliegende soll ein Grundverständis zu \ac{CNNs} vermitteln, da dies die Grundlegende Architektur der neuronalen Netze ist und darauf der Cutting Assistant aufbaut (siehe Kapitel ~\ref{sec:cutting-assistent}).
 
-\ac{CNNs} sind neuronale Netze für Bilddaten. Sie bestehen aus wiederholten Blöcken aus Faltung (Convolution), nichtlinearer Aktivierung (z.\,B.\ ReLU) und Subsampling/Pooling sowie einem abschließenden Klassifikations- oder Regressionskopf aus vollverbundenen Schichten. Abbildung~\ref{fig:cnn-schema} zeigt dies am Beispiel eines Roboterbildes. Zu Beginn laufen kleine Filter (typisch $3{\times}3$) über das Pixelgitter und reagieren auf lokale Muster. In den ersten Schichten entstehen so Merkmalskarten für einfache Strukturen wie Kanten und Ecken, etwa an der Kontur des Kopfes oder entlang der Armsegmente des Roboters. Eine Aktivierungsfunktion unterdrückt schwache oder negative Antworten und erhöht den Kontrast zwischen relevanten und irrelevanten Bildbereichen. Pooling verdichtet die Merkmalskarten und macht die Darstellung unempfindlicher gegenüber kleinen Verschiebungen. Demnach ist die genaue Position der runden Augen oder Schrauben wird damit weniger wichtig als ihr Auftreten.
+\ac{CNNs} sind neuronale Netze für Bilddaten. Sie bestehen aus wiederholten Blöcken aus Faltung (Convolution), nichtlinearer Aktivierung (z.\,B.\ \ac{ReLU}) und Pooling.
+Die wichtigsten Bausteine sind in den Unterkapiteln ~\ref{sec:cnns-conv-blocks}, ~\ref{sec:cnns-activation-batchnorm} und ~\ref{sec:cnns-pooling} näher beschrieben.
+
+Die Abbildung~\ref{fig:cnn-schema} zeigt den Aufbau eines \ac{CNNs} am Beispiel eines Roboterbildes. Zu Beginn laufen kleine Filter (typisch $3{\times}3$) über das Pixelgitter und reagieren auf lokale Muster, auch Kernel genannt. In den ersten Schichten entstehen somit Merkmalskarten für einfache Strukturen wie Kanten und Ecken, etwa an der Kontur des Kopfes oder entlang der Armsegmente des Roboters. Eine Aktivierungsfunktion unterdrückt schwache oder negative Antworten und erhöht den Kontrast zwischen relevanten und irrelevanten Bildbereichen. Pooling verdichtet die Merkmalskarten und macht die Darstellung unempfindlicher gegenüber kleinen Verschiebungen. Demnach ist die genaue Position der runden Augen oder Schrauben wird damit weniger wichtig als ihr Auftreten.
 
 Mit zunehmender Tiefe kombinieren weitere Faltungen diese einfachen Muster zu komplexeren Teilen wie Gesicht, Gelenken oder ganzen Körpersegmenten. Am Ende wird die verdichtete Repräsentation \emph{geflattet} und von vollverbundenen Schichten zu einer Ausgabe verdichtet, etwa zu Klassenwahrscheinlichkeiten (\enquote{Roboter ja/nein}) oder zu kontinuierlichen Werten. Das Netzwerk lernt dabei sämtliche Filtergewichte gemeinsam, sodass frühe und späte Schichten aufeinander abgestimmt sind und eine konsistente Merkmals­hierarchie vom Lokalen zum Globalen entsteht \parencite{FischerPochwyt_NeuronaleNetze_2017}.
 
@@ -86,3 +89,57 @@ Mit zunehmender Tiefe kombinieren weitere Faltungen diese einfachen Muster zu ko
 \end{figure}
 
 Nach demselben Prinzip arbeitet der in dieser Arbeit weiterentwickelte \enquote{Cutting Assistent} (siehe Kapitel~\ref{sec:cutting-assistent}). Frühe Filter reagieren auf Kanten und Texturwechsel in Schnittkantenbildern, Pooling sorgt für Robustheit gegen kleine Lageänderungen, und tiefere Schichten fassen wiederkehrende Muster wie Riefen, Rauheitsstrukturen oder Gratbildung zusammen. Die abschließenden Schichten liefern je nach Aufgabe eine Klassifikation oder Regressionswerte wie Rauheit oder Grathöhe.
+
+Die nachfolgenden Unterkapitel erläutern die zuvor genannten zentralen Bausteine eines \ac{CNNs} im Detail.
+
+\subsection{Faltungsblöcke}
+\label{sec:cnns-conv-blocks}
+Die 2D-Faltung berechnet an jeder Position \((i,j)\) einen gewichteten Mittelwert der lokalen Nachbarschaft. Die Gleichung~\eqref{eq:conv2d} definiert dies präzise. Der Kernel mit Kantenlänge \(k\) und Gewichten \(w_{u,v}\) wird zentriert über das Eingabebild \(x\) gelegt, die Offsets \((u,v)\) laufen über das Fenster. Das Ergebnis ist der Ausgabewert \(y_{i,j}\). Die in Tabelle ~\ref{tab:formelzeichen-min} aufgeführten Symbole legen die Notation fest. Durch das gemeinsame Nutzen der Kernelgewichte über alle \((i,j)\) sinkt die Parameterzahl und die Abbildung bleibt verschiebungsgleich. In praktischen Netzen ist die Faltung mehrkanalig, dies bedeutet dass mehrere Eingabekanäle gemeinsam gefaltet  werden und zu mehreren Ausgabekanälen kombiniert werden.
+% Kompakte Tabelle: nur die für \eqref{eq:conv2d} und \eqref{eq:gap} nötigen Formelzeichen
+\begin{table}[htbp]
+  \centering
+  \caption{Formelzeichen zu Gl.~\eqref{eq:conv2d} (Faltung) und Gl.~\eqref{eq:gap} (Global Average Pooling).}
+  \label{tab:formelzeichen-min}
+  \renewcommand{\arraystretch}{1.1}
+  \begin{tabular}{l p{0.62\linewidth} l}
+    \hline
+    \textbf{Symbol} & \textbf{Bedeutung} & \textbf{Einheit/Bereich} \\
+    \hline
+    $x_{i,j}$   & Eingabewert an Position $(i,j)$ & reell \\
+    $y_{i,j}$   & Ausgabewert der Faltung an Position $(i,j)$ & reell \\
+    $w_{u,v}$   & Gewicht des $k\times k$-Kerns an Offset $(u,v)$ & reell \\
+    $k$         & Kantenlänge des Faltungskerns & Pixel \\
+    $i,j$       & Räumliche Indizes (Zeile, Spalte) & — \\
+    $u,v$       & Kernelindizes & — \\
+    $H, W$      & Höhe und Breite der Merkmalskarte für GAP & Pixel \\
+    $z_c$       & GAP-Ausgabe für Kanal $c$ & reell \\
+    $c$         & Kanalindex & — \\
+    \hline
+  \end{tabular}
+\end{table}
+
+
+% 2D-Faltung (ein Kanal, Kernel k×k, zentriert)
+\begin{equation}
+  y_{i,j}
+  = \sum_{u=0}^{k-1}\sum_{v=0}^{k-1}
+    w_{u,v}\; x_{\,i+u-\lfloor k/2 \rfloor,\; j+v-\lfloor k/2 \rfloor}
+  \label{eq:conv2d}
+\end{equation}
+
+% Global Average Pooling (über H×W)
+\begin{equation}
+  z_c = \frac{1}{H\,W}\sum_{i=1}^{H}\sum_{j=1}^{W} y_{i,j,c}
+  \label{eq:gap}
+\end{equation}
+
+
+\subsection{Aktivierungsfunktion}
+\label{sec:cnns-activation-batchnorm}
+Die Faltung liefert lineare Antworten \(y_{i,j}\), die im nächsten Schritt nichtlinear transformiert werden. Eine Aktivierungsfunktion \(\phi(\cdot)\) wird punktweise angewandt und macht die Abbildung modellierfähig, etwa durch ReLU, die negative Werte auf null setzt.
+Die ReLU-Aktivierung ist eine üblich genutzte Aktiviewrungsfunktion.
+
+\subsection{Pooling und Downsampling (mit Global Average Pooling)}
+\label{sec:cnns-pooling}
+
+Pooling fasst lokale Nachbarschaften zusammen und reduziert die räumliche Auflösung. Dadurch sinkt der Rechenaufwand und die Darstellung wird unempfindlicher gegenüber kleinen Verschiebungen. Am Ende des Merkmalsextraktors wird häufig ein \emph{Global Average Pooling} eingesetzt. Die Gleichung ~\eqref{eq:gap} mittelt für jeden Kanal \(c\) alle Werte \(y_{i,j,c}\) über Höhe \(H\) und Breite \(W\) zu einem einzigen Skalar \(z_c\). Die so entstehende Vektordarstellung ist kompakt, senkt die Parameterzahl des Ausgabekopfes und eignet sich für Klassifikation und Regression. Andere Pooling-Varianten wie Max- oder lokales Average-Pooling können in früheren Stufen eingesetzt werden, ohne die in Gleichung ~\eqref{eq:gap} definierte globale Verdichtung am Ende zu ersetzen. Das Max-Pooling behält pro lokalem Fenster den größten Wert und hebt starke Aktivierungen hervor und das Min-Pooling behält den kleinsten Wert und betont schwache Antworten oder dunkle Strukturen. Beide Varianten reduzieren die Zahl der Werte und wirken als nichtlineare Verdichtung.
