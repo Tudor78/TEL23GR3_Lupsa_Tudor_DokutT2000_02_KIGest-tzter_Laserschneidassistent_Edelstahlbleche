@@ -100,6 +100,39 @@
       \verb https://user.phil.hhu.de/~petersen/SoSe17_Teamprojekt/AR/neuronalenetze.html
       \endverb
     \endentry
+    \entry{IBM_CNN_Topic}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7bb018b160d19c13ef9838e91e53cccf}{%
+           family={{IBM Corporation}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{7bb018b160d19c13ef9838e91e53cccf}
+      \strng{fullhash}{7bb018b160d19c13ef9838e91e53cccf}
+      \strng{fullhashraw}{7bb018b160d19c13ef9838e91e53cccf}
+      \strng{bibnamehash}{7bb018b160d19c13ef9838e91e53cccf}
+      \strng{authorbibnamehash}{7bb018b160d19c13ef9838e91e53cccf}
+      \strng{authornamehash}{7bb018b160d19c13ef9838e91e53cccf}
+      \strng{authorfullhash}{7bb018b160d19c13ef9838e91e53cccf}
+      \strng{authorfullhashraw}{7bb018b160d19c13ef9838e91e53cccf}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{What are convolutional neural networks?}
+      \field{urlday}{3}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ibm.com/think/topics/convolutional-neural-networks
+      \endverb
+      \verb{url}
+      \verb https://www.ibm.com/think/topics/convolutional-neural-networks
+      \endverb
+    \endentry
     \entry{ISO9013-2017}{standard}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=7058e4bd76f877c52b621c942b30613c}{%

@@ -95,6 +95,15 @@ Die nachfolgenden Unterkapitel erläutern die zuvor genannten zentralen Baustein
 \subsection{Faltungsblöcke}
 \label{sec:cnns-conv-blocks}
 Die 2D-Faltung berechnet an jeder Position \((i,j)\) einen gewichteten Mittelwert der lokalen Nachbarschaft. Die Gleichung~\eqref{eq:conv2d} definiert dies präzise. Der Kernel mit Kantenlänge \(k\) und Gewichten \(w_{u,v}\) wird zentriert über das Eingabebild \(x\) gelegt, die Offsets \((u,v)\) laufen über das Fenster. Das Ergebnis ist der Ausgabewert \(y_{i,j}\). Die in Tabelle ~\ref{tab:formelzeichen-min} aufgeführten Symbole legen die Notation fest. Durch das gemeinsame Nutzen der Kernelgewichte über alle \((i,j)\) sinkt die Parameterzahl und die Abbildung bleibt verschiebungsgleich. In praktischen Netzen ist die Faltung mehrkanalig, dies bedeutet dass mehrere Eingabekanäle gemeinsam gefaltet  werden und zu mehreren Ausgabekanälen kombiniert werden.
+Die Abbildung~\ref{fig:conv-schema} zeigt die obig beschriebene Faltung mit einem $3{\times}3$-Kernel, welcher über ein Eingabebild läuft und eine Merkmalskarte erzeugt. Die Faltung des Kernels mit der Eingabe ergibt für die position \((0,0)\) den Wert \(y_{0,0}=16\).
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.6\linewidth]{conv_demo.png}
+  \caption[Schematischer Aufbau einer Faltung]{Schematischer Aufbau einer Faltung mit einem $3{\times}3$-Kernel, der über ein Eingabebild läuft und eine Merkmalskarte erzeugt \parencite{IBM_CNN_Topic}.}
+  \label{fig:conv-schema}
+\end{figure}
+
 % Kompakte Tabelle: nur die für \eqref{eq:conv2d} und \eqref{eq:gap} nötigen Formelzeichen
 \begin{table}[htbp]
   \centering
@@ -137,9 +146,25 @@ Die 2D-Faltung berechnet an jeder Position \((i,j)\) einen gewichteten Mittelwer
 \subsection{Aktivierungsfunktion}
 \label{sec:cnns-activation-batchnorm}
 Die Faltung liefert lineare Antworten \(y_{i,j}\), die im nächsten Schritt nichtlinear transformiert werden. Eine Aktivierungsfunktion \(\phi(\cdot)\) wird punktweise angewandt und macht die Abbildung modellierfähig, etwa durch ReLU, die negative Werte auf null setzt.
-Die ReLU-Aktivierung ist eine üblich genutzte Aktiviewrungsfunktion.
+Die ReLU-Aktivierung ist eine üblich genutzte Aktiviewrungsfunktion. Die Abbildung ~\ref{fig:ReLU} zeigt den Graphen der ReLU-Aktivierungsfunktion \(\phi(x)=\max(0,x)\). In dem Graphen wird ersichtlich, dass alle negativen Eingabewerte auf null gesetzt werden und alle positiven Werte unverändert bleiben. 
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.48\linewidth]{relu.png}
+  \caption[ReLu Graph]{Graph der ReLU-Aktivierungsfunktion \(\phi(x)=\max(0,x)\) \parencite{FischerPochwyt_NeuronaleNetze_2017}.}
+  \label{fig:ReLU}
+\end{figure}
+
 
 \subsection{Pooling und Downsampling (mit Global Average Pooling)}
 \label{sec:cnns-pooling}
 
 Pooling fasst lokale Nachbarschaften zusammen und reduziert die räumliche Auflösung. Dadurch sinkt der Rechenaufwand und die Darstellung wird unempfindlicher gegenüber kleinen Verschiebungen. Am Ende des Merkmalsextraktors wird häufig ein \emph{Global Average Pooling} eingesetzt. Die Gleichung ~\eqref{eq:gap} mittelt für jeden Kanal \(c\) alle Werte \(y_{i,j,c}\) über Höhe \(H\) und Breite \(W\) zu einem einzigen Skalar \(z_c\). Die so entstehende Vektordarstellung ist kompakt, senkt die Parameterzahl des Ausgabekopfes und eignet sich für Klassifikation und Regression. Andere Pooling-Varianten wie Max- oder lokales Average-Pooling können in früheren Stufen eingesetzt werden, ohne die in Gleichung ~\eqref{eq:gap} definierte globale Verdichtung am Ende zu ersetzen. Das Max-Pooling behält pro lokalem Fenster den größten Wert und hebt starke Aktivierungen hervor und das Min-Pooling behält den kleinsten Wert und betont schwache Antworten oder dunkle Strukturen. Beide Varianten reduzieren die Zahl der Werte und wirken als nichtlineare Verdichtung.
+Die Abbildung~\ref{fig:maxpooling} zeigt den schematischen Aufbau eines Max-Pooling mit einem $2{\times}2$-Fenster und Schrittweite 2, der die räumliche Auflösung halbiert. Das selbe Prinzip der Abbildung gilt auch für Average-Pooling und Min-Pooling, nur dass dort der Durchschnitt bzw. der kleinste Wert im Fenster genommen wird \parencite{FischerPochwyt_NeuronaleNetze_2017}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.48\linewidth]{maxpool.jpeg}
+  \caption[MaxPooling Schaubild]{Schematischer Aufbau eines Max-Pooling mit einem $2{\times}2$-Fenster und Schrittweite 2, der die räumliche Auflösung halbiert \parencite{FischerPochwyt_NeuronaleNetze_2017}.}
+  \label{fig:maxpooling}
+\end{figure}
