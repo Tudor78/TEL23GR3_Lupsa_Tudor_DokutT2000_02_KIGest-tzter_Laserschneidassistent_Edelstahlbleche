@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.30)  3 SEP 2025 15:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.30)  4 SEP 2025 08:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -616,7 +616,7 @@ Class scrreprt Warning: Usage of package `tocloft' together
 (scrreprt)              `part', `section', `subsection',
 (scrreprt)              `subsubsection', `paragraph' and `subparagraph'.
 (scrreprt)              Nevertheless, using requested
-(scrreprt)              package `tocloft' on input line 75.
+(scrreprt)              package `tocloft' on input line 77.
 
 (C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\tex/latex/tocloft\tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
@@ -1092,7 +1092,12 @@ although it is yet undefined on input line 25.
 
 [7
 
-] (main.lot)
+] (main.lot
+Overfull \hbox (4.87971pt too wide) in paragraph at lines 4--4
+ [][] [][]\T1/cmr/m/n/10.95 Pipeline-Parameter der Ausrei�er-Korrektur (Burr-Verlauf) f�r Edel-stahl und Baustahl 
+ []
+
+)
 \tf@lot=\write6
 \openout6 = `main.lot'.
 
@@ -1107,8 +1112,6 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 4.
 Package tocbasic Info: Using my definition of `\numberline' on input line 5.
 Package tocbasic Info: Using my definition of `\numberline' on input line 6.
 Package tocbasic Info: Using my definition of `\numberline' on input line 7.
-Package tocbasic Info: Using my definition of `\numberline' on input line 8.
-Package tocbasic Info: Using my definition of `\numberline' on input line 9.
 )
 \tf@lol=\write7
 \openout7 = `main.lol'.
@@ -1144,7 +1147,7 @@ chapter 2.
 ]
 
 [4]
-<img/burr_roughness_schaubild.png, id=267, 770.88pt x 184.69pt>
+<img/burr_roughness_schaubild.png, id=265, 770.88pt x 184.69pt>
 File: img/burr_roughness_schaubild.png Graphic file (type png)
 <use img/burr_roughness_schaubild.png>
 Package pdftex.def Info: img/burr_roughness_schaubild.png  used on input line 67.
@@ -1154,12 +1157,12 @@ although it is yet undefined on input line 77.
 
 
 [5 <./img/burr_roughness_schaubild.png (PNG copy)>]
-<img/CNNs.png, id=281, 1043.9pt x 321.2pt>
+<img/CNNs.png, id=279, 1043.9pt x 321.2pt>
 File: img/CNNs.png Graphic file (type png)
 <use img/CNNs.png>
 Package pdftex.def Info: img/CNNs.png  used on input line 86.
 (pdftex.def)             Requested size: 409.71692pt x 126.06638pt.
-<img/conv_demo.png, id=289, 1124.2pt x 633.36626pt>
+<img/conv_demo.png, id=287, 1124.2pt x 633.36626pt>
 File: img/conv_demo.png Graphic file (type png)
 <use img/conv_demo.png>
 Package pdftex.def Info: img/conv_demo.png  used on input line 102.
@@ -1167,7 +1170,7 @@ Package pdftex.def Info: img/conv_demo.png  used on input line 102.
 
 
 [6 <./img/CNNs.png>]
-<img/relu.png, id=305, 400.49625pt x 212.795pt>
+<img/relu.png, id=303, 400.49625pt x 212.795pt>
 File: img/relu.png Graphic file (type png)
 <use img/relu.png>
 Package pdftex.def Info: img/relu.png  used on input line 153.
@@ -1175,7 +1178,7 @@ Package pdftex.def Info: img/relu.png  used on input line 153.
 
 
 [7 <./img/conv_demo.png (PNG copy)>]
-<img/maxpool.jpeg, id=318, 789.95125pt x 369.38pt>
+<img/maxpool.jpeg, id=316, 789.95125pt x 369.38pt>
 File: img/maxpool.jpeg Graphic file (type jpg)
 <use img/maxpool.jpeg>
 Package pdftex.def Info: img/maxpool.jpeg  used on input line 167.
@@ -1184,50 +1187,46 @@ Package pdftex.def Info: img/maxpool.jpeg  used on input line 167.
 
 [8 <./img/relu.png> <./img/maxpool.jpeg>]
 chapter 3.
-<img/valid_edge_image.png, id=329, 1445.4pt x 1084.05pt>
-File: img/valid_edge_image.png Graphic file (type png)
-<use img/valid_edge_image.png>
-Package pdftex.def Info: img/valid_edge_image.png  used on input line 12.
-(pdftex.def)             Requested size: 223.07211pt x 167.2982pt.
-<img/finger_false_image.png, id=330, 1445.4pt x 1084.05pt>
-File: img/finger_false_image.png Graphic file (type png)
-<use img/finger_false_image.png>
-Package pdftex.def Info: img/finger_false_image.png  used on input line 13.
-(pdftex.def)             Requested size: 223.07211pt x 167.2982pt.
-<img/cutting_assistant_pipeline.png, id=332, 1128.215pt x 311.1625pt>
+<img/cutting_assistant_pipeline.png, id=325, 1128.215pt x 311.1625pt>
 File: img/cutting_assistant_pipeline.png Graphic file (type png)
 <use img/cutting_assistant_pipeline.png>
-Package pdftex.def Info: img/cutting_assistant_pipeline.png  used on input line 24.
+Package pdftex.def Info: img/cutting_assistant_pipeline.png  used on input line 12.
 (pdftex.def)             Requested size: 432.48051pt x 119.27803pt.
+<img/valid_edge_image.png, id=328, 1445.4pt x 1084.05pt>
+File: img/valid_edge_image.png Graphic file (type png)
+<use img/valid_edge_image.png>
+Package pdftex.def Info: img/valid_edge_image.png  used on input line 22.
+(pdftex.def)             Requested size: 223.07211pt x 167.2982pt.
+<img/finger_false_image.png, id=329, 1445.4pt x 1084.05pt>
+File: img/finger_false_image.png Graphic file (type png)
+<use img/finger_false_image.png>
+Package pdftex.def Info: img/finger_false_image.png  used on input line 23.
+(pdftex.def)             Requested size: 223.07211pt x 167.2982pt.
 
 
 [9
 
- <./img/valid_edge_image.png (PNG copy)> <./img/finger_false_image.png (PNG copy)>]
-<img/keyence_triangulation.png, id=340, 301.125pt x 166.6225pt>
+ <./img/cutting_assistant_pipeline.png (PNG copy)> <./img/valid_edge_image.png (PNG copy)> <./img/finger_false_image.png (PNG copy)>]
+<img/keyence_triangulation.png, id=338, 301.125pt x 166.6225pt>
 File: img/keyence_triangulation.png Graphic file (type png)
 <use img/keyence_triangulation.png>
-Package pdftex.def Info: img/keyence_triangulation.png  used on input line 40.
+Package pdftex.def Info: img/keyence_triangulation.png  used on input line 42.
 (pdftex.def)             Requested size: 182.09486pt x 100.76242pt.
-<img/baustahlmessung_keyence.png, id=344, 893.3375pt x 450.68375pt>
-File: img/baustahlmessung_keyence.png Graphic file (type png)
-<use img/baustahlmessung_keyence.png>
-Package pdftex.def Info: img/baustahlmessung_keyence.png  used on input line 49.
-(pdftex.def)             Requested size: 223.07211pt x 112.53311pt.
-<img/3D-Punktewolke.jpg, id=345, 349.90726pt x 215.00325pt>
+<img/keyence _koord.jpg, id=342, 963.6pt x 542.025pt>
+File: img/keyence _koord.jpg Graphic file (type jpg)
+<use img/keyence _koord.jpg>
+Package pdftex.def Info: img/keyence _koord.jpg  used on input line 51.
+(pdftex.def)             Requested size: 223.07211pt x 125.47365pt.
+<img/3D-Punktewolke.jpg, id=343, 349.90726pt x 215.00325pt>
 File: img/3D-Punktewolke.jpg Graphic file (type jpg)
 <use img/3D-Punktewolke.jpg>
-Package pdftex.def Info: img/3D-Punktewolke.jpg  used on input line 50.
+Package pdftex.def Info: img/3D-Punktewolke.jpg  used on input line 52.
 (pdftex.def)             Requested size: 223.07211pt x 137.06685pt.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+[10 <./img/keyence_triangulation.png>]) (includes/datengenerierung_edelstahldatensaetze.tex
 
-) (includes/datengenerierung_edelstahldatensaetze.tex
-
-[10 <./img/cutting_assistant_pipeline.png (PNG copy)> <./img/keyence_triangulation.png>]
-
-[11 <./img/baustahlmessung_keyence.png (PNG copy)> <./img/3D-Punktewolke.jpg>]
+[11 <./img/keyence _koord.jpg> <./img/3D-Punktewolke.jpg>]
 chapter 4.
 
 
@@ -1239,108 +1238,108 @@ although it is yet undefined on input line 12.
 
 
 [13]
-<img/handscanner_keyence.jpg, id=372, 3752.0175pt x 2813.51125pt>
+<img/handscanner_keyence.jpg, id=369, 3752.0175pt x 2813.51125pt>
 File: img/handscanner_keyence.jpg Graphic file (type jpg)
 <use img/handscanner_keyence.jpg>
-Package pdftex.def Info: img/handscanner_keyence.jpg  used on input line 28.
-(pdftex.def)             Requested size: 273.14923pt x 204.82222pt.
+Package pdftex.def Info: img/handscanner_keyence.jpg  used on input line 27.
+(pdftex.def)             Requested size: 318.66948pt x 238.9521pt.
+<img/smartphone_industriekamera.jpg, id=371, 4047.12pt x 3035.34pt>
+File: img/smartphone_industriekamera.jpg Graphic file (type jpg)
+<use img/smartphone_industriekamera.jpg>
+Package pdftex.def Info: img/smartphone_industriekamera.jpg  used on input line 37.
+(pdftex.def)             Requested size: 318.66948pt x 238.98798pt.
 
 
 [14 <./img/handscanner_keyence.jpg>]
-<img/smartphone_industriekamera.jpg, id=378, 4047.12pt x 3035.34pt>
-File: img/smartphone_industriekamera.jpg Graphic file (type jpg)
-<use img/smartphone_industriekamera.jpg>
-Package pdftex.def Info: img/smartphone_industriekamera.jpg  used on input line 40.
-(pdftex.def)             Requested size: 273.14923pt x 204.85345pt.
-
-
-[15 <./img/smartphone_industriekamera.jpg>]
-<img/qualitatsschatzung_burr.png, id=387, 184.5294pt x 184.5294pt>
+<img/qualitatsschatzung_burr.png, id=378, 184.5294pt x 184.5294pt>
 File: img/qualitatsschatzung_burr.png Graphic file (type png)
 <use img/qualitatsschatzung_burr.png>
-Package pdftex.def Info: img/qualitatsschatzung_burr.png  used on input line 53.
+Package pdftex.def Info: img/qualitatsschatzung_burr.png  used on input line 50.
 (pdftex.def)             Requested size: 218.51521pt x 218.52838pt.
 
-Underfull \hbox (badness 2951) in paragraph at lines 54--54
+Underfull \hbox (badness 2951) in paragraph at lines 51--51
 [][][]\T1/cmr/m/n/10.95 Vergleich zwi-schen vor-her-ge-sag-ten
  []
 
-<img/qualitatsschatzung_roughness.png, id=388, 184.5294pt x 185.0112pt>
+<img/qualitatsschatzung_roughness.png, id=379, 184.5294pt x 185.0112pt>
 File: img/qualitatsschatzung_roughness.png Graphic file (type png)
 <use img/qualitatsschatzung_roughness.png>
-Package pdftex.def Info: img/qualitatsschatzung_roughness.png  used on input line 60.
+Package pdftex.def Info: img/qualitatsschatzung_roughness.png  used on input line 57.
 (pdftex.def)             Requested size: 218.51521pt x 219.09894pt.
 
-Underfull \hbox (badness 2951) in paragraph at lines 61--61
+Underfull \hbox (badness 2951) in paragraph at lines 58--58
 [][][]\T1/cmr/m/n/10.95 Vergleich zwi-schen vor-her-ge-sag-ten
  []
 
 
-Underfull \hbox (badness 1430) in paragraph at lines 61--61
+Underfull \hbox (badness 1430) in paragraph at lines 58--58
 \T1/cmr/m/n/10.95 und tat-s�ch-li-chen Wer-ten f�r die
  []
 
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[16 <./img/qualitatsschatzung_burr.png> <./img/qualitatsschatzung_roughness.png>]
-<img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_OFFOFFON_625_12.0_3.png, id=397, 1084.05pt x 813.0375pt>
+
+
+[15 <./img/smartphone_industriekamera.jpg>]
+<img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_OFFOFFON_625_12.0_3.png, id=388, 1084.05pt x 813.0375pt>
 File: img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_OFFOFFON_625_12.0_3.png Graphic file (type png)
 <use img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_OFFOFFON_625_12.0_3.png>
-Package pdftex.def Info: img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_OFFOFFON_625_12.0_3.png  used on input line 79.
+Package pdftex.def Info: img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_OFFOFFON_625_12.0_3.png  used on input line 76.
 (pdftex.def)             Requested size: 109.26108pt x 81.94121pt.
-<img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_OFFOFFON_1400_12.0_2.png, id=398, 1084.05pt x 813.0375pt>
+<img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_OFFOFFON_1400_12.0_2.png, id=389, 1084.05pt x 813.0375pt>
 File: img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_OFFOFFON_1400_12.0_2.png Graphic file (type png)
 <use img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_OFFOFFON_1400_12.0_2.png>
-Package pdftex.def Info: img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_OFFOFFON_1400_12.0_2.png  used on input line 80.
+Package pdftex.def Info: img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_OFFOFFON_1400_12.0_2.png  used on input line 77.
 (pdftex.def)             Requested size: 109.26108pt x 81.94121pt.
-<img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_ONONOFF_270_12.0_1.png, id=399, 1084.05pt x 813.0375pt>
+<img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_ONONOFF_270_12.0_1.png, id=390, 1084.05pt x 813.0375pt>
 File: img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_ONONOFF_270_12.0_1.png Graphic file (type png)
 <use img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_ONONOFF_270_12.0_1.png>
-Package pdftex.def Info: img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_ONONOFF_270_12.0_1.png  used on input line 81.
+Package pdftex.def Info: img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_ONONOFF_270_12.0_1.png  used on input line 78.
 (pdftex.def)             Requested size: 109.26108pt x 81.94121pt.
-<img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_burr_HDR.png, id=400, 1445.4pt x 1084.05pt>
+<img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_burr_HDR.png, id=391, 1445.4pt x 1084.05pt>
 File: img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_burr_HDR.png Graphic file (type png)
 <use img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_burr_HDR.png>
-Package pdftex.def Info: img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_burr_HDR.png  used on input line 82.
+Package pdftex.def Info: img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_burr_HDR.png  used on input line 79.
 (pdftex.def)             Requested size: 109.26108pt x 81.94534pt.
 
 
-[17 <./img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_OFFOFFON_625_12.0_3.png> <./img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_OFFOFFON_1400_12.0_2.png> <./img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_ONONOFF_270_12.0_1.png> <./img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_burr_HDR.png (PNG copy)>]
-<img/burr_baustahl.png, id=410, 242.40562pt x 182.18062pt>
+[16 <./img/qualitatsschatzung_burr.png> <./img/qualitatsschatzung_roughness.png>]
+<img/burr_baustahl.png, id=403, 242.40562pt x 182.18062pt>
 File: img/burr_baustahl.png Graphic file (type png)
 <use img/burr_baustahl.png>
-Package pdftex.def Info: img/burr_baustahl.png  used on input line 98.
+Package pdftex.def Info: img/burr_baustahl.png  used on input line 95.
 (pdftex.def)             Requested size: 218.51521pt x 164.23344pt.
-<img/burr_edelstahl.png, id=411, 240.14719pt x 180.675pt>
+<img/burr_edelstahl.png, id=404, 240.14719pt x 180.675pt>
 File: img/burr_edelstahl.png Graphic file (type png)
 <use img/burr_edelstahl.png>
-Package pdftex.def Info: img/burr_edelstahl.png  used on input line 104.
+Package pdftex.def Info: img/burr_edelstahl.png  used on input line 101.
 (pdftex.def)             Requested size: 218.51521pt x 164.40346pt.
-<img/roughness_baustahl.png, id=412, 242.40562pt x 179.16937pt>
+<img/roughness_baustahl.png, id=405, 242.40562pt x 179.16937pt>
 File: img/roughness_baustahl.png Graphic file (type png)
 <use img/roughness_baustahl.png>
-Package pdftex.def Info: img/roughness_baustahl.png  used on input line 114.
+Package pdftex.def Info: img/roughness_baustahl.png  used on input line 111.
 (pdftex.def)             Requested size: 218.51521pt x 161.51886pt.
-<img/roughness_edelstahl.png, id=413, 242.40562pt x 182.18062pt>
+<img/roughness_edelstahl.png, id=406, 242.40562pt x 182.18062pt>
 File: img/roughness_edelstahl.png Graphic file (type png)
 <use img/roughness_edelstahl.png>
-Package pdftex.def Info: img/roughness_edelstahl.png  used on input line 120.
+Package pdftex.def Info: img/roughness_edelstahl.png  used on input line 117.
 (pdftex.def)             Requested size: 218.51521pt x 164.23344pt.
 
 
-[18 <./img/burr_baustahl.png> <./img/burr_edelstahl.png> <./img/roughness_baustahl.png> <./img/roughness_edelstahl.png>]
-<img/Werkstück_Proben-ID.jpg, id=424, 728.4816pt x 409.7709pt>
+[17 <./img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_OFFOFFON_625_12.0_3.png> <./img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_OFFOFFON_1400_12.0_2.png> <./img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_ONONOFF_270_12.0_1.png> <./img/A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_burr_HDR.png (PNG copy)> <./img/burr_baustahl.png> <./img/burr_edelstahl.png>]
+<img/Werkstück_Proben-ID.jpg, id=414, 728.4816pt x 409.7709pt>
 File: img/Werkstück_Proben-ID.jpg Graphic file (type jpg)
 <use img/Werkstück_Proben-ID.jpg>
-Package pdftex.def Info: img/Werkstück_Proben-ID.jpg  used on input line 134.
+Package pdftex.def Info: img/Werkstück_Proben-ID.jpg  used on input line 131.
 (pdftex.def)             Requested size: 318.66948pt x 179.24931pt.
 ) (includes/optimierung_vektorberechnung.tex
 
-[19 <./img/Werkstück_Proben-ID.jpg>]
+[18 <./img/roughness_baustahl.png> <./img/roughness_edelstahl.png> <./img/Werkstück_Proben-ID.jpg>]
 chapter 5.
 
 
-[20
+[19
 
 ]
 Overfull \hbox (10.88788pt too wide) in paragraph at lines 29--52
@@ -1349,76 +1348,71 @@ $[]$
 
 
 
+[20]
+
 [21]
-Underfull \hbox (badness 1577) in paragraph at lines 56--56
-[][]\T1/cmr/m/n/10.95 Pipeline-Parameter Out-lier Cor-rec-ti-on (Edel-stahl, Burr-Verlauf) (zu []Al-go-
- []
-
-
-
-[22]
-<img/rauheitsanalyse.png, id=473, 362.3136pt x 217.2918pt>
+<img/rauheitsanalyse.png, id=452, 362.3136pt x 217.2918pt>
 File: img/rauheitsanalyse.png Graphic file (type png)
 <use img/rauheitsanalyse.png>
-Package pdftex.def Info: img/rauheitsanalyse.png  used on input line 84.
+Package pdftex.def Info: img/rauheitsanalyse.png  used on input line 86.
 (pdftex.def)             Requested size: 273.14923pt x 163.8139pt.
 
 
-[23 <./img/rauheitsanalyse.png>]
-<img/outlier_detection_baustahl.png, id=480, 219.06844pt x 112.16907pt>
+[22 <./img/rauheitsanalyse.png>]
+<img/outlier_detection_baustahl.png, id=459, 219.06844pt x 112.16907pt>
 File: img/outlier_detection_baustahl.png Graphic file (type png)
 <use img/outlier_detection_baustahl.png>
-Package pdftex.def Info: img/outlier_detection_baustahl.png  used on input line 105.
+Package pdftex.def Info: img/outlier_detection_baustahl.png  used on input line 107.
 (pdftex.def)             Requested size: 218.51521pt x 111.88808pt.
-<img/outlier_detection_edelstahl.png, id=481, 239.39438pt x 121.95563pt>
+<img/outlier_detection_edelstahl.png, id=460, 239.39438pt x 121.95563pt>
 File: img/outlier_detection_edelstahl.png Graphic file (type png)
 <use img/outlier_detection_edelstahl.png>
-Package pdftex.def Info: img/outlier_detection_edelstahl.png  used on input line 111.
+Package pdftex.def Info: img/outlier_detection_edelstahl.png  used on input line 113.
 (pdftex.def)             Requested size: 218.51521pt x 111.32031pt.
-) (includes/qa_modell.tex
 
-[24 <./img/outlier_detection_baustahl.png> <./img/outlier_detection_edelstahl.png>]
 
-[25]
+[23 <./img/outlier_detection_baustahl.png> <./img/outlier_detection_edelstahl.png>]) (includes/qa_modell.tex
+
+[24]
 chapter 6.
 Package acronym Info: Label `acro:QA' newly defined as it shall be overridden
 although it is yet undefined on input line 4.
 Package acronym Info: Label `acro:VGG' newly defined as it shall be overridden
 although it is yet undefined on input line 6.
-<img/vgg16_cutting.png, id=497, 731.73375pt x 265.74281pt>
+<img/vgg16_cutting.png, id=476, 731.73375pt x 265.74281pt>
 File: img/vgg16_cutting.png Graphic file (type png)
 <use img/vgg16_cutting.png>
 Package pdftex.def Info: img/vgg16_cutting.png  used on input line 14.
 (pdftex.def)             Requested size: 455.24411pt x 165.33057pt.
 
 
-[26
+[25
 
  <./img/vgg16_cutting.png>]
-<img/baustahl_modellbewertung.png, id=506, 591.20876pt x 391.4625pt>
+<img/baustahl_modellbewertung.png, id=485, 591.20876pt x 391.4625pt>
 File: img/baustahl_modellbewertung.png Graphic file (type png)
 <use img/baustahl_modellbewertung.png>
 Package pdftex.def Info: img/baustahl_modellbewertung.png  used on input line 30.
 (pdftex.def)             Requested size: 327.7763pt x 217.03726pt.
 
 
-[27 <./img/baustahl_modellbewertung.png (PNG copy)>]
-<img/trainiertes_modell_burr.png, id=513, 591.20876pt x 391.4625pt>
+[26 <./img/baustahl_modellbewertung.png (PNG copy)>]
+<img/trainiertes_modell_burr.png, id=491, 591.20876pt x 391.4625pt>
 File: img/trainiertes_modell_burr.png Graphic file (type png)
 <use img/trainiertes_modell_burr.png>
 Package pdftex.def Info: img/trainiertes_modell_burr.png  used on input line 49.
 (pdftex.def)             Requested size: 327.7763pt x 217.03726pt.
 ) (includes/reflexion_ausblick.tex
 
-[28 <./img/trainiertes_modell_burr.png (PNG copy)>]
+[27 <./img/trainiertes_modell_burr.png (PNG copy)>]
 chapter 7.
 
 
-[29
+[28
 
 ])
 
-[30] (includes/anhang.tex
+[29] (includes/anhang.tex
 chapter without number
 (C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
@@ -1432,27 +1426,27 @@ LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 33.
 
 
-[31
+[30
 
 
 ]
 
-[32]
+[31]
 
-[33])
+[32])
 
-[34]
-
-Package biblatex Warning: No driver for 'standard'.
-(biblatex)                Using fallback driver on input line 85.
-
+[33]
 
 Package biblatex Warning: No driver for 'standard'.
 (biblatex)                Using fallback driver on input line 85.
 
 
+Package biblatex Warning: No driver for 'standard'.
+(biblatex)                Using fallback driver on input line 85.
 
-[35
+
+
+[34
 
 ] (main.aux)
  ***********
@@ -1464,17 +1458,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32854 strings out of 468149
- 655288 string characters out of 5430114
- 1911043 words of memory out of 5000000
- 60747 multiletter control sequences out of 15000+600000
+ 32844 strings out of 468149
+ 655028 string characters out of 5430114
+ 1910911 words of memory out of 5000000
+ 60745 multiletter control sequences out of 15000+600000
  651251 words of font info for 94 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,18n,127p,10998b,3331s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecit1000.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcit0800.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecit0800.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1095.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1728.pk><C:/Users/lupsatu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/lupsatu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/lupsatu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/lupsatu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/lupsatu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/lupsatu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/lupsatu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (45 pages, 15047633 bytes).
+ <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecit1000.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcit0800.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecit0800.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1095.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\lupsatu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1728.pk><C:/Users/lupsatu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/lupsatu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/lupsatu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/lupsatu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/lupsatu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/lupsatu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/lupsatu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on main.pdf (44 pages, 14805929 bytes).
 PDF statistics:
- 1832 PDF objects out of 2073 (max. 8388607)
- 280 named destinations out of 1000 (max. 500000)
+ 1806 PDF objects out of 2073 (max. 8388607)
+ 272 named destinations out of 1000 (max. 500000)
  457 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,3 +1,4 @@
 \babel@toc {ngerman}{}\relax 
 \contentsline {table}{\numberline {1}{\ignorespaces Formelzeichen für Rauheit und Grat}}{4}{table.15}%
 \contentsline {table}{\numberline {2}{\ignorespaces Formelzeichen zu Gl.~\eqref {eq:conv2d} (Faltung) und Gl.~\eqref {eq:gap} (Global Average Pooling).}}{7}{table.21}%
+\contentsline {table}{\numberline {3}{\ignorespaces Pipeline-Parameter der Ausreißer-Korrektur (Burr-Verlauf) für Edelstahl und Baustahl (zu \cref {alg:simple-burr}).}}{21}{table.54}%
